@@ -44,6 +44,11 @@ export function TransformationForm() {
         const personalizedMsg = generatePersonalizedResponse(formData);
         setPersonalizedResponse(personalizedMsg);
         setSubmitted(true);
+        
+        // Auto-open transformation roadmap after 1 second
+        setTimeout(() => {
+          window.open('/Transformation_Roadmap_Webpage.html', '_blank');
+        }, 1000);
       } else {
         alert('There was an error submitting the form. Please try again.');
       }
@@ -176,13 +181,24 @@ Let's hop on a free discovery call so I can learn more about your unique situati
                 📧 Check your email - I've sent this roadmap plus your free resources!
               </CardDescription>
               <div className="flex flex-col sm:flex-row gap-2 justify-center">
-                <Button variant="outline" onClick={handleReset} className="w-full sm:w-auto">
-                  Ask Another Question
+                <Button 
+                  asChild 
+                  className="bg-jw-burgundy hover:bg-jw-rust w-full sm:w-auto"
+                >
+                  <Link href="/Transformation_Roadmap_Webpage.html" target="_blank">
+                    View Transformation Roadmap
+                  </Link>
                 </Button>
-                <Button asChild className="bg-jw-burgundy hover:bg-jw-rust w-full sm:w-auto">
+                <Button 
+                  asChild 
+                  className="bg-jw-gold hover:bg-jw-gold/80 text-black w-full sm:w-auto"
+                >
                   <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">
                     Book Discovery Call
                   </Link>
+                </Button>
+                <Button variant="outline" onClick={handleReset} className="w-full sm:w-auto">
+                  Ask Another Question
                 </Button>
               </div>
             </CardContent>

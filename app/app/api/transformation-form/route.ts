@@ -15,35 +15,37 @@ export async function POST(request: NextRequest) {
       book: "Book Study & Coaching"
     };
 
-    const subject = supportTypeLabels[supportType] || "Transformation Roadmap Request";
+    const subject = `New Transformation Roadmap Request: ${supportTypeLabels[supportType] || "General"}`;
 
-    // Create email content
-    const emailContent = `
-New Transformation Roadmap Request
-
+    // Submit to Web3Forms
+    const formData = new FormData();
+    formData.append('access_key', '3ca23ba3-c21b-4bf0-817a-10d1ace488ea');
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('subject', subject);
+    formData.append('message', `
 Name: ${name}
 Email: ${email}
-Support Type: ${subject}
+Support Type: ${supportTypeLabels[supportType] || supportType}
 
----
-This form was submitted from joniwoods.com
-    `.trim();
+This form was submitted from joniwoods.com requesting the Transformation Roadmap.
+    `.trim());
 
-    // For now, we'll just log the submission
-    // In production, you would integrate with an email service like SendGrid, Resend, etc.
-    console.log('Form submission:', {
-      to: 'joniwoods@gmail.com',
-      subject,
-      content: emailContent
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData
     });
 
-    // Simulate successful email send
-    // TODO: Integrate with actual email service
-    
-    return NextResponse.json({ 
-      success: true, 
-      message: 'Form submitted successfully' 
-    }, { status: 200 });
+    const result = await response.json();
+
+    if (result.success) {
+      return NextResponse.json({ 
+        success: true, 
+        message: 'Form submitted successfully' 
+      }, { status: 200 });
+    } else {
+      throw new Error('Web3Forms submission failed');
+    }
     
   } catch (error) {
     console.error('Error processing form submission:', error);
