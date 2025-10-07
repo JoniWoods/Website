@@ -20,6 +20,7 @@ export async function POST(request: NextRequest) {
     // Submit to Web3Forms
     const formData = new FormData();
     formData.append('access_key', '3ca23ba3-c21b-4bf0-817a-10d1ace488ea');
+    formData.append('to', 'joniwoodswebsite@gmail.com');
     formData.append('name', name);
     formData.append('email', email);
     formData.append('subject', subject);
