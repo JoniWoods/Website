@@ -14,20 +14,64 @@ interface FormData {
   name: string;
   email: string;
   supportType: string;
+  message: string;
 }
 
 export function TransformationForm() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
-    supportType: "individual"
+    supportType: "",
+    message: ""
   });
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [personalizedResponse, setPersonalizedResponse] = useState("");
 
+  // Generate prefilled message based on support type and name
+  const generatePrefilledMessage = (supportType: string, name: string) => {
+    const supportTypeLabels = {
+      individual: "Individual Coaching",
+      corporate: "Corporate Culture Strategy", 
+      speaking: "Speaking & Workshops",
+      relationship: "Relationship Coaching",
+      book: "Book Study & Coaching"
+    };
+    
+    const supportLabel = supportTypeLabels[supportType as keyof typeof supportTypeLabels] || supportType;
+    const firstName = name.split(' ')[0] || name;
+    
+    return `Hi, Joni
+
+I'm interested in ${supportLabel}. What are the next steps I should take on this journey?
+
+Thanks,
+${firstName}`;
+  };
+
+  // Update message when support type or name changes
+  const updateFormData = (updates: Partial<FormData>) => {
+    setFormData(prev => {
+      const newData = { ...prev, ...updates };
+      
+      // Auto-update message if support type or name changed and we have both values
+      if ((updates.supportType || updates.name) && newData.supportType && newData.name) {
+        newData.message = generatePrefilledMessage(newData.supportType, newData.name);
+      }
+      
+      return newData;
+    });
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validate required fields
+    if (!formData.supportType) {
+      alert('Please select a support type before submitting.');
+      return;
+    }
+    
     setLoading(true);
 
     try {
@@ -42,6 +86,7 @@ export function TransformationForm() {
 Name: ${formData.name}
 Email: ${formData.email}
 Support Type: ${formData.supportType}
+Message: ${formData.message}
 
 This form was submitted from joniwoods.com requesting the Transformation Roadmap.
       `.trim());
@@ -103,7 +148,8 @@ Let's hop on a free discovery call so I can learn more about your unique situati
     setFormData({
       name: "",
       email: "",
-      supportType: "individual"
+      supportType: "",
+      message: ""
     });
     setSubmitted(false);
     setPersonalizedResponse("");
@@ -136,7 +182,7 @@ Let's hop on a free discovery call so I can learn more about your unique situati
                       id="name"
                       placeholder="Enter your name"
                       value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      onChange={(e) => updateFormData({ name: e.target.value })}
                       required
                     />
                   </div>
@@ -147,17 +193,21 @@ Let's hop on a free discovery call so I can learn more about your unique situati
                       type="email"
                       placeholder="your.email@example.com"
                       value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      onChange={(e) => updateFormData({ email: e.target.value })}
                       required
                     />
                   </div>
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="support">What type of support interests you most?</Label>
-                  <Select value={formData.supportType} onValueChange={(value) => setFormData({ ...formData, supportType: value })}>
+                  <Label htmlFor="support">What type of support interests you most? *</Label>
+                  <Select 
+                    value={formData.supportType} 
+                    onValueChange={(value) => updateFormData({ supportType: value })}
+                    required
+                  >
                     <SelectTrigger>
-                      <SelectValue />
+                      <SelectValue placeholder="Please select a support type" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="individual">Individual Coaching</SelectItem>
@@ -167,6 +217,18 @@ Let's hop on a free discovery call so I can learn more about your unique situati
                       <SelectItem value="book">Book Study & Coaching</SelectItem>
                     </SelectContent>
                   </Select>
+                </div>
+
+                <div className="space-y-2">
+                  <Label htmlFor="message">Message to Joni</Label>
+                  <Textarea
+                    id="message"
+                    placeholder="Your message will be automatically filled based on your selections above"
+                    value={formData.message}
+                    onChange={(e) => updateFormData({ message: e.target.value })}
+                    rows={6}
+                    className="resize-none"
+                  />
                 </div>
                 
                 <div className="flex justify-center">
