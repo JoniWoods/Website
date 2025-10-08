@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function Book() {
   return (
-    <section id="book" className="px-0 md:container space-y-6 py-4 dark:bg-transparent md:py-6 lg:py-10">
+    <section id="book" className="px-0 md:container space-y-6 py-4 dark:bg-transparent md:py-6 lg:py-10 bg-muted/50">
       <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
         <div className="relative overflow-hidden rounded-lg bg-background p-6">
           <div className="flex flex-col items-center justify-center h-full">
@@ -84,7 +84,7 @@ export function Book() {
                     </svg>
                   </Link>
                 </Button>
-                <Button variant="outline" asChild className="w-full sm:w-auto">
+                <Button variant="outline" asChild className="w-full sm:w-auto" style={{backgroundColor: "#e1662a", color: "white", borderColor: "#e1662a"}}>
                   <Link href="/Joni Woods Media Kit_Final.pdf" target="_blank">
                     Book Preview
                   </Link>

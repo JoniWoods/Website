@@ -38,15 +38,15 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="px-0 md:container space-y-6 py-4 dark:bg-transparent md:py-6 lg:py-10">
+    <section id="testimonials" className="px-0 md:container space-y-6 py-4 dark:bg-transparent md:py-6 lg:py-10" style={{backgroundColor: "#530248"}}>
       <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-        <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+        <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl" style={{color: "#ffffff"}}>
           Transformation{" "}
-          <span className="gradient-text">
+          <span className="gradient-text" style={{color: "#ffffff"}}>
             Stories
           </span>
         </h2>
-        <p className="w-full px-4 leading-normal text-muted-foreground sm:text-lg sm:leading-7" style={{ textWrap: 'balance' }}>
+        <p className="w-full px-4 leading-normal sm:text-lg sm:leading-7" style={{ textWrap: 'balance', color: "#ffffff" }}>
           Real stories from individuals, couples, and organizations who chose healing over staying stuck.
         </p>
       </div>
@@ -70,7 +70,7 @@ export function Testimonials() {
       </div>
       
       <div className="mx-auto text-center px-4 md:px-0">
-        <p className="text-muted-foreground mb-4">Ready to write your own transformation story?</p>
+        <p className="mb-4" style={{color: "#ffffff"}}>Ready to write your own transformation story?</p>
         <Button asChild className="bg-jw-burgundy hover:bg-jw-rust w-full sm:w-auto">
           <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">
             Begin Your Journey

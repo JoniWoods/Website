@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="w-full bg-white">
+    <section className="w-full bg-white bg-muted/50">
       {/* Mobile/Tablet Layout - Image First, Then Text */}
       <div className="md:hidden">
         {/* Mobile Hero Image - Full Width */}
@@ -32,7 +32,7 @@ export function Hero() {
             
             <div className="flex flex-col gap-3 w-full pt-2">
               <Button size="default" asChild className="bg-jw-blue hover:bg-jw-blue/80 w-full">
-                <Link href="https://books2read.com/u/mq2K7v" target="_blank">
+                <Link href="#book" target="_blank">
                   Explore My Book
                   <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -65,7 +65,7 @@ export function Hero() {
               
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-2 md:pt-4">
                 <Button size="lg" asChild className="bg-jw-blue hover:bg-jw-blue/80">
-                  <Link href="https://books2read.com/u/mq2K7v" target="_blank">
+                  <Link href="#book" target="_blank">
                     Explore My Book
                     <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

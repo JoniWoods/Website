@@ -156,7 +156,7 @@ Let's hop on a free discovery call so I can learn more about your unique situati
   };
 
   return (
-    <section id="transform" className="px-0 md:container space-y-6 py-4 dark:bg-transparent md:py-6 lg:py-10">
+    <section id="transform" className="px-0 md:container space-y-6 py-4 dark:bg-transparent md:py-6 lg:py-10 bg-muted/50">
       <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
         <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
           Get Your Free{" "}

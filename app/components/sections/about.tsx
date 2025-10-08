@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function About() {
   return (
-    <section id="about" className="px-0 md:container space-y-6 py-4 dark:bg-transparent md:py-6 lg:py-10">
+    <section id="about" className="px-0 md:container space-y-6 py-4 dark:bg-transparent md:py-6 lg:py-10" style={{backgroundColor: "#ffffff"}}>
       <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
         <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
           Meet{" "}
@@ -82,7 +82,7 @@ export function About() {
         
         {/* Professional Highlights - Full width under both columns */}
         <div className="w-full">
-          <Card>
+          <Card style={{backgroundColor: "#ffffff", border: "none", boxShadow: "0px 0px 1px rgba(0, 0, 0, 0.25)"}}>
             <CardContent className="p-6 sm:p-8">
               <h3 className="text-xl sm:text-2xl font-semibold mb-6 text-center">Professional Highlights</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">

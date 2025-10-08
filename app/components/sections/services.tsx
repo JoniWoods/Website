@@ -36,7 +36,7 @@ const services = [
 
 export function Services() {
   return (
-    <section id="services" className="px-4 sm:px-6 md:px-8 lg:container space-y-6 sm:space-y-8 md:space-y-10 py-6 sm:py-8 md:py-10 lg:py-12 xl:py-16 dark:bg-transparent">
+    <section id="services" className="px-4 sm:px-6 md:px-8 lg:container space-y-6 sm:space-y-8 md:space-y-10 py-6 sm:py-8 md:py-10 lg:py-12 xl:py-16 dark:bg-transparent bg-muted/50">
       <div className="mx-auto flex max-w-[58rem] lg:max-w-[70rem] flex-col items-center space-y-4 sm:space-y-5 md:space-y-6 text-center px-4">
         <h2 className="font-heading text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-[1.1]">
           <span className="gradient-text">
@@ -69,7 +69,7 @@ export function Services() {
                 ))}
               </ul>
               <div className="flex justify-center">
-                <Button asChild className="w-full sm:w-auto bg-jw-blue text-white hover:bg-jw-blue/80">
+                <Button asChild className="w-full sm:w-auto text-white hover:opacity-80" style={{backgroundColor: "#505155"}}>
                   <Link href={service.href} target="_blank">
                     {service.cta}
                     <svg className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
