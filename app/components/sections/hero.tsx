@@ -4,16 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 export function Hero() {
-  const scrollToBook = () => {
-    const bookSection = document.getElementById('book');
-    if (bookSection) {
-      bookSection.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-    }
-  };
-
   return (
     <section className="w-screen relative left-[50%] right-[50%] -mx-[50vw] bg-muted/50">
       <div className="container mx-auto px-4 md:px-8">
@@ -42,11 +32,13 @@ export function Hero() {
             </p>
             
             <div className="flex flex-col gap-3 w-full pt-2">
-              <Button size="default" onClick={scrollToBook} className="bg-jw-blue hover:bg-jw-blue/80 w-full">
-                Explore My Book
-                <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
+              <Button size="default" asChild className="bg-jw-blue hover:bg-jw-blue/80 w-full">
+                <Link href="/Joni Woods Media Kit_Final.pdf" target="_blank">
+                  Explore My Book
+                  <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </Link>
               </Button>
               <Button variant="outline" size="default" asChild className="border-jw-charcoal text-jw-charcoal hover:bg-jw-charcoal/5 w-full">
                 <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">
@@ -73,11 +65,13 @@ export function Hero() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-2 md:pt-4">
-                <Button size="lg" onClick={scrollToBook} className="bg-jw-blue hover:bg-jw-blue/80">
-                  Explore My Book
-                  <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
+                <Button size="lg" asChild className="bg-jw-blue hover:bg-jw-blue/80">
+                  <Link href="/Joni Woods Media Kit_Final.pdf" target="_blank">
+                    Explore My Book
+                    <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild className="border-jw-charcoal text-jw-charcoal hover:bg-jw-charcoal/5">
                   <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">
