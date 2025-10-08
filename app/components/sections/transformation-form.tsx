@@ -9,6 +9,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import Link from "next/link";
+import Image from "next/image";
 
 interface FormData {
   name: string;
@@ -169,7 +170,7 @@ Joni`;
           </span>{" "}
           Roadmap
         </h2>
-        <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+        <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7 mb-8">
           Tell me about your situation and I'll send you personalized insights and resources to begin your healing journey.
         </p>
       </div>
@@ -247,10 +248,18 @@ Joni`;
             </CardContent>
           </Card>
         ) : (
-          <Card className="border-jw-burgundy/20 bg-jw-burgundy/5">
+          <Card className="border-[#9b9b9c]/20 bg-[#9b9b9c]/5">
             <CardHeader className="text-center">
-              <div className="text-6xl mb-4">✨</div>
-              <CardTitle className="text-jw-burgundy text-2xl">Your Personalized Transformation Roadmap Is Ready!</CardTitle>
+              <div className="flex justify-center mb-4">
+                <Image 
+                  src="/images/JoniWoods_logo.png" 
+                  alt="Joni Woods Logo"
+                  width={60}
+                  height={60}
+                  className="object-contain"
+                />
+              </div>
+              <CardTitle className="text-jw-blue text-2xl">Your Personalized Transformation Roadmap Is Ready!</CardTitle>
             </CardHeader>
             <CardContent>
               <Card className="mb-6">
@@ -282,7 +291,8 @@ Joni`;
                 </Button>
                 <Button 
                   asChild 
-                  className="bg-jw-gold hover:bg-jw-gold/80 text-black w-full sm:w-auto"
+                  className="bg-white hover:bg-gray-50 text-black border border-gray-200 w-full sm:w-auto shadow-[0_1px_0px_0px_rgba(0,0,0,0.1)]"
+                  style={{ boxShadow: '0 1px 0px 0px rgba(0,0,0,0.1)' }}
                 >
                   <Link href="mailto:?subject=I%20Have%20A%20Question">
                     Ask A Question
