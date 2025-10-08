@@ -28,6 +28,7 @@ export function TransformationForm() {
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [personalizedResponse, setPersonalizedResponse] = useState("");
+  const [lastSubmitTime, setLastSubmitTime] = useState<number>(0);
 
   // Generate prefilled message based on support type and name
   const generatePrefilledMessage = (supportType: string, name: string) => {
@@ -67,6 +68,13 @@ ${firstName}`;
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    // Basic rate limiting - prevent submissions within 30 seconds
+    const now = Date.now();
+    if (now - lastSubmitTime < 30000) {
+      alert('Please wait 30 seconds before submitting again.');
+      return;
+    }
+    
     // Validate required fields
     if (!formData.supportType) {
       alert('Please select a support type before submitting.');
@@ -74,12 +82,13 @@ ${firstName}`;
     }
     
     setLoading(true);
+    setLastSubmitTime(now);
 
     try {
-      // Submit directly to Web3Forms
+      // Submit directly to Web3Forms using environment variables
       const formData_web3 = new FormData();
-      formData_web3.append('access_key', '3ca23ba3-c21b-4bf0-817a-10d1ace488ea');
-      formData_web3.append('to', 'joniwoodswebsite@gmail.com');
+      formData_web3.append('access_key', process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '');
+      formData_web3.append('to', process.env.NEXT_PUBLIC_CONTACT_EMAIL || '');
       formData_web3.append('name', formData.name);
       formData_web3.append('email', formData.email);
       formData_web3.append('subject', `New Transformation Roadmap Request: ${formData.supportType}`);
@@ -184,6 +193,7 @@ Joni`;
                       placeholder="Enter your name"
                       value={formData.name}
                       onChange={(e) => updateFormData({ name: e.target.value })}
+                      disabled={loading}
                       required
                     />
                   </div>
@@ -195,6 +205,7 @@ Joni`;
                       placeholder="your.email@example.com"
                       value={formData.email}
                       onChange={(e) => updateFormData({ email: e.target.value })}
+                      disabled={loading}
                       required
                     />
                   </div>
@@ -205,6 +216,7 @@ Joni`;
                   <Select 
                     value={formData.supportType} 
                     onValueChange={(value) => updateFormData({ supportType: value })}
+                    disabled={loading}
                     required
                   >
                     <SelectTrigger>
@@ -227,6 +239,7 @@ Joni`;
                     placeholder="Your message will be automatically filled based on your selections above"
                     value={formData.message}
                     onChange={(e) => updateFormData({ message: e.target.value })}
+                    disabled={loading}
                     rows={6}
                     className="resize-none"
                   />

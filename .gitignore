@@ -16,3 +16,12 @@ app/node_modules/
 app/.next/
 app/out/
 app/dist/
+
+# Build artifacts that should typically be excluded
+# Note: Keeping _next/ tracked for static hosting deployment
+# but consider excluding if using a build step in deployment
+*.tsbuildinfo
+
+# IDE
+.vscode/
+.idea/

@@ -98,6 +98,18 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Custom gradient text effect */
 .gradient-text {
   @apply bg-gradient-to-r from-jw-burgundy to-jw-rust bg-clip-text text-transparent;
