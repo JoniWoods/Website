@@ -83,20 +83,14 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="#" 
+                <a 
+                  href="/Joni_Woods_Free_Business_Resources.pdf" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-white/80 hover:text-white transition-colors"
                 >
                   Free Resources
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="#" 
-                  className="text-white/80 hover:text-white transition-colors"
-                >
-                  Book Club Guide
-                </Link>
+                </a>
               </li>
             </ul>
             
