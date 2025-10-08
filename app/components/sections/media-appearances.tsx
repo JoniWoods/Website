@@ -40,12 +40,12 @@ export function MediaAppearances() {
             Media Appearances
           </span>
         </h2>
-        <p className="max-w-[85%] leading-normal sm:text-lg sm:leading-7 text-foreground">
+        <p className="max-w-[85%] leading-normal sm:text-lg sm:leading-7 text-foreground mb-8">
           Sharing insights on transformation, relationships, and personal growth across various media platforms.
         </p>
       </div>
       
-      <div className="mx-auto grid justify-center gap-6 sm:grid-cols-1 md:max-w-[76rem] md:grid-cols-3">
+      <div className="mx-auto grid justify-center gap-6 sm:grid-cols-1 md:max-w-[76rem] md:grid-cols-3 mt-8">
         {appearances.map((appearance, index) => (
           <a key={index} href={appearance.url} target="_blank" rel="noopener noreferrer">
             <Card className="group cursor-pointer transition-all hover:scale-105 h-full flex flex-col">
