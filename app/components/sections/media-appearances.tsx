@@ -31,7 +31,7 @@ const appearances = [
 
 export function MediaAppearances() {
   return (
-    <section className="w-screen relative left-[50%] right-[50%] -mx-[50vw] space-y-6 py-4 md:py-6 lg:py-10" style={{backgroundColor: "#e9b222"}}>
+    <section className="w-screen relative left-[50%] right-[50%] -mx-[50vw] space-y-6 py-4 md:py-6 lg:py-10" style={{backgroundColor: "#fff16d"}}>
       <div className="container mx-auto px-4 md:px-8">
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
         <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
@@ -40,7 +40,7 @@ export function MediaAppearances() {
             Media Appearances
           </span>
         </h2>
-        <p className="max-w-[85%] leading-normal sm:text-lg sm:leading-7" style={{color: "#ffffff"}}>
+        <p className="max-w-[85%] leading-normal sm:text-lg sm:leading-7 text-foreground">
           Sharing insights on transformation, relationships, and personal growth across various media platforms.
         </p>
       </div>
@@ -76,7 +76,7 @@ export function MediaAppearances() {
       </div>
       
       <div className="flex justify-center mt-8 px-4 md:px-0">
-        <Button asChild className="bg-jw-burgundy hover:bg-jw-rust w-full sm:w-auto" size="lg">
+        <Button asChild className="bg-jw-burgundy hover:bg-jw-rust w-full sm:w-auto shadow-[0_1px_0px_0px_rgba(0,0,0,0.1)]" size="lg" style={{ boxShadow: '0 1px 0px 0px rgba(0,0,0,0.1)' }}>
           <Link href="https://www.youtube.com/@joniwoods7141" target="_blank">
             View More Content
             <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

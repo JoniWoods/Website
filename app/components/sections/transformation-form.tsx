@@ -130,7 +130,7 @@ This form was submitted from joniwoods.com requesting the Transformation Roadmap
 
     const firstName = data.name.split(' ')[0] || data.name;
 
-    return `Hi ${firstName}! 
+    return `Hi ${firstName}!
 
 Thank you for your interest in connecting! I'm excited to support you on your transformation journey.
 
@@ -237,7 +237,7 @@ Joni`;
                 </div>
                 
                 <div className="flex flex-col items-center space-y-3">
-                  <Button type="submit" className="w-full sm:w-auto bg-jw-burgundy hover:bg-jw-rust" size="lg" disabled={loading}>
+                  <Button type="submit" className="w-full sm:w-auto bg-jw-burgundy hover:bg-jw-rust shadow-[0_1px_0px_0px_rgba(0,0,0,0.1)]" size="lg" disabled={loading} style={{ boxShadow: '0 1px 0px 0px rgba(0,0,0,0.1)' }}>
                     {loading ? "Creating Your Personalized Roadmap..." : "Get My Free Transformation Roadmap →"}
                   </Button>
                   <p className="text-xs text-muted-foreground text-center max-w-md">
@@ -264,7 +264,7 @@ Joni`;
             <CardContent>
               <Card className="mb-6">
                 <CardContent className="p-4">
-                  <pre className="whitespace-pre-wrap text-sm text-muted-foreground leading-relaxed font-sans">
+                  <pre className="whitespace-pre-wrap text-base text-foreground leading-relaxed font-sans">
                     {personalizedResponse}
                   </pre>
                 </CardContent>
@@ -275,7 +275,8 @@ Joni`;
               <div className="flex flex-col sm:flex-row gap-2 justify-center">
                 <Button 
                   asChild 
-                  className="bg-jw-burgundy hover:bg-jw-rust w-full sm:w-auto"
+                  className="bg-jw-burgundy hover:bg-jw-rust w-full sm:w-auto shadow-[0_1px_0px_0px_rgba(0,0,0,0.1)]"
+                  style={{ boxShadow: '0 1px 0px 0px rgba(0,0,0,0.1)' }}
                 >
                   <Link href="/Transformation_Roadmap_Webpage.html" target="_blank">
                     View Transformation Roadmap
@@ -283,9 +284,10 @@ Joni`;
                 </Button>
                 <Button 
                   asChild 
-                  className="bg-jw-blue hover:bg-jw-blue/80 text-white w-full sm:w-auto"
+                  className="bg-jw-blue hover:bg-jw-blue/80 text-white w-full sm:w-auto shadow-[0_1px_0px_0px_rgba(0,0,0,0.1)]"
+                  style={{ boxShadow: '0 1px 0px 0px rgba(0,0,0,0.1)' }}
                 >
-                  <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">
+                  <Link href="https://calendly.com/joniwoods/virtual-coffee">
                     Let's Have Coffee!
                   </Link>
                 </Button>
@@ -294,7 +296,7 @@ Joni`;
                   className="bg-white hover:bg-gray-50 text-black border border-gray-200 w-full sm:w-auto shadow-[0_1px_0px_0px_rgba(0,0,0,0.1)]"
                   style={{ boxShadow: '0 1px 0px 0px rgba(0,0,0,0.1)' }}
                 >
-                  <Link href="mailto:?subject=I%20Have%20A%20Question">
+                  <Link href="mailto:?subject=I%20have%20a%20Question.">
                     Ask A Question
                   </Link>
                 </Button>
