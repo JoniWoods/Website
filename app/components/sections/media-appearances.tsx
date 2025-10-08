@@ -31,16 +31,16 @@ const appearances = [
 
 export function MediaAppearances() {
   return (
-    <section className="w-screen relative left-[50%] right-[50%] -mx-[50vw] space-y-6 py-4 md:py-6 lg:py-10" style={{backgroundColor: "#fff16d"}}>
+    <section className="w-screen relative left-[50%] right-[50%] -mx-[50vw] space-y-8 py-8 md:py-10 lg:py-16" style={{backgroundColor: "#fff16d"}}>
       <div className="container mx-auto px-4 md:px-8">
-        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-        <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-6 text-center">
+        <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl mt-6 mb-8">
           Recent{" "}
           <span className="gradient-text">
             Media Appearances
           </span>
         </h2>
-        <p className="max-w-[85%] leading-normal sm:text-lg sm:leading-7 text-foreground">
+        <p className="max-w-[85%] leading-normal sm:text-lg sm:leading-7 text-foreground mb-12 mt-4">
           Sharing insights on transformation, relationships, and personal growth across various media platforms.
         </p>
       </div>
