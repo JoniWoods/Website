@@ -103,11 +103,6 @@ This form was submitted from joniwoods.com requesting the Transformation Roadmap
         const personalizedMsg = generatePersonalizedResponse(formData);
         setPersonalizedResponse(personalizedMsg);
         setSubmitted(true);
-        
-        // Auto-open transformation roadmap after 1 second
-        setTimeout(() => {
-          window.open('/transformation_roadmap.html', '_blank');
-        }, 1000);
       } else {
         alert('Error: ' + (result.message || 'Form submission failed. Please try again.'));
       }
@@ -160,17 +155,17 @@ Joni`;
   };
 
   return (
-    <section id="transform" className="w-screen relative left-[50%] right-[50%] -mx-[50vw] space-y-6 py-4 md:py-6 lg:py-10 bg-muted/50">
+    <section id="transform" className="w-screen relative left-[50%] right-[50%] -mx-[50vw] space-y-8 py-6 md:py-8 lg:py-12 bg-muted/50">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-        <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-6 text-center">
+        <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl mt-4 mb-6">
           Get Your Free{" "}
           <span className="gradient-text">
             Transformation
           </span>{" "}
           Roadmap
         </h2>
-        <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7 mb-8">
+        <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7 mb-10 mt-6">
           Tell me about your situation and I'll send you personalized insights and resources to begin your healing journey.
         </p>
       </div>
@@ -249,8 +244,8 @@ Joni`;
           </Card>
         ) : (
           <Card className="border-[#9b9b9c]/20 bg-[#9b9b9c]/5">
-            <CardHeader className="text-center">
-              <div className="flex justify-center mb-4">
+            <CardHeader className="text-center pt-8 pb-6">
+              <div className="flex justify-center mb-6">
                 <Image 
                   src="/images/JoniWoods_logo.png" 
                   alt="Joni Woods Logo"
@@ -259,17 +254,17 @@ Joni`;
                   className="object-contain"
                 />
               </div>
-              <CardTitle className="text-jw-blue text-2xl">Your Personalized Transformation Roadmap Is Ready!</CardTitle>
+              <CardTitle className="text-jw-blue text-2xl mb-4">Your Personalized Transformation Roadmap Is Ready!</CardTitle>
             </CardHeader>
-            <CardContent>
-              <Card className="mb-6">
-                <CardContent className="p-4">
+            <CardContent className="px-6 pb-8">
+              <Card className="mb-8">
+                <CardContent className="p-6">
                   <pre className="whitespace-pre-wrap text-base text-foreground leading-relaxed font-sans">
                     {personalizedResponse}
                   </pre>
                 </CardContent>
               </Card>
-              <CardDescription className="text-center mb-6">
+              <CardDescription className="text-center mb-8 text-base">
                 📧 Keep an eye on your email for our newsletter!
               </CardDescription>
               <div className="flex flex-col sm:flex-row gap-2 justify-center">
@@ -296,7 +291,7 @@ Joni`;
                   className="bg-white hover:bg-gray-50 text-black border border-gray-200 w-full sm:w-auto shadow-[0_1px_0px_0px_rgba(0,0,0,0.1)]"
                   style={{ boxShadow: '0 1px 0px 0px rgba(0,0,0,0.1)' }}
                 >
-                  <Link href="mailto:?subject=I%20have%20a%20Question.">
+                  <Link href="mailto:?subject=I%20Have%20A%20Question">
                     Ask A Question
                   </Link>
                 </Button>
