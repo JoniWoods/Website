@@ -33,12 +33,12 @@ export function Hero() {
             
             <div className="flex flex-col gap-3 w-full pt-2">
               <Button size="default" asChild className="bg-jw-blue hover:bg-jw-blue/80 w-full">
-                <Link href="/Explore My Book.pdf" target="_blank">
+                <a href="/Explore My Book.pdf" target="_blank" rel="noopener noreferrer">
                   Explore My Book
                   <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
-                </Link>
+                </a>
               </Button>
               <Button variant="outline" size="default" asChild className="border-jw-charcoal text-jw-charcoal hover:bg-jw-charcoal/5 w-full">
                 <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">
@@ -66,12 +66,12 @@ export function Hero() {
               
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-2 md:pt-4">
                 <Button size="lg" asChild className="bg-jw-blue hover:bg-jw-blue/80">
-                  <Link href="/Explore My Book.pdf" target="_blank">
+                  <a href="/Explore My Book.pdf" target="_blank" rel="noopener noreferrer">
                     Explore My Book
                     <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                  </Link>
+                  </a>
                 </Button>
                 <Button variant="outline" size="lg" asChild className="border-jw-charcoal text-jw-charcoal hover:bg-jw-charcoal/5">
                   <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">

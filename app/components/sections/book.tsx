@@ -86,9 +86,9 @@ export function Book() {
                   </Link>
                 </Button>
                 <Button variant="outline" asChild className="w-full sm:w-auto" style={{backgroundColor: "#e1662a", color: "white", borderColor: "#e1662a"}}>
-                  <Link href="/Explore My Book.pdf" target="_blank">
+                  <a href="/Explore My Book.pdf" target="_blank" rel="noopener noreferrer">
                     Book Preview
-                  </Link>
+                  </a>
                 </Button>
               </div>
             </div>
