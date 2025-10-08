@@ -76,7 +76,7 @@ export function Book() {
                 <Badge variant="outline">Hardcover $27.99</Badge>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-2 justify-center">
+              <div className="flex flex-col sm:flex-row gap-2">
                 <Button asChild className="bg-jw-burgundy hover:bg-jw-rust w-full sm:w-auto">
                   <Link href="https://books2read.com/u/mq2K7v" target="_blank">
                     Buy Now
