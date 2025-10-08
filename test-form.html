@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Form - Direct Web3Forms Submission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #8B2332;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        button {
+            background: #8B2332;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background: #6d1a26;
+        }
+        
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+            text-align: center;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Test Form - Direct Web3Forms</h1>
+        
+        <form action="https://api.web3forms.com/submit" method="POST" id="testForm">
+            <input type="hidden" name="access_key" value="3ca23ba3-c21b-4bf0-817a-10d1ace488ea">
+            <input type="hidden" name="to" value="joniwoodswebsite@gmail.com">
+            <input type="hidden" name="subject" value="Test Form Submission from Joni Woods Website">
+            
+            <div class="form-group">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Your Email *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="support">Support Type</label>
+                <select id="support" name="support">
+                    <option value="individual">Individual Coaching</option>
+                    <option value="corporate">Corporate Culture Strategy</option>
+                    <option value="speaking">Speaking & Workshops</option>
+                    <option value="relationship">Relationship Coaching</option>
+                    <option value="book">Book Study & Coaching</option>
+                </select>
+            </div>
+            
+            <input type="hidden" name="message" value="This is a test form submission to verify Web3Forms is working correctly.">
+            
+            <button type="submit">Test Form Submission</button>
+        </form>
+        
+        <div class="success-message" id="successMessage">
+            ✅ Test form submitted successfully! Check joniwoodswebsite@gmail.com for the email.
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('testForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(result => {
+                if (result.success) {
+                    document.getElementById('successMessage').style.display = 'block';
+                    this.reset();
+                } else {
+                    alert('Error: ' + (result.message || 'Form submission failed'));
+                }
+            })
+            .catch(error => {
+                alert('Error: ' + error.message);
+            });
+        });
+    </script>
+</body>
+</html>

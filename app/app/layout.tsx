@@ -41,6 +41,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <style>
+          {`
+            /* Ensure all sections with non-white backgrounds are full width */
+            section {
+              width: 100%;
+              margin-left: auto;
+              margin-right: auto;
+            }
+            section:not([style*='background-color: #ffffff']) {
+              width: 100%;
+            }
+          `}
+        </style>
+      </head>
       <body className={inter.className}>
         {children}
         <script

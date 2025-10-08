@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Joni Woods - Burned, Blocked, and Better Than Ever</title>
+    <meta name="description" content="A raw, faith-rooted memoir of divorce, self-discovery, and the healing that begins when you stop pretending you're fine."/>
+    <meta name="author" content="Joni Woods"/>
+    <meta name="keywords" content="Joni Woods, healing, divorce recovery, self-discovery, relationship coach, emotional intelligence"/>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="w-full z-50 bg-white/95 backdrop-blur border-b transition-all duration-300 relative">
+        <div class="container flex h-16 items-center justify-between">
+            <a class="flex items-center space-x-2" href="/">
+                <img alt="Joni Woods" loading="lazy" width="40" height="40" class="rounded-full" src="/images/JoniWoods_logo.png"/>
+                <span class="font-bold text-xl">Joni Woods</span>
+            </a>
+            <div class="hidden md:flex items-center gap-6">
+                <a class="text-sm font-medium transition-colors hover:text-primary" href="#about">About</a>
+                <a class="text-sm font-medium transition-colors hover:text-primary" href="#services">Services</a>
+                <a class="text-sm font-medium transition-colors hover:text-primary" href="#book">Book</a>
+                <a class="text-sm font-medium transition-colors hover:text-primary" href="#testimonials">Testimonials</a>
+                <a class="text-sm font-medium transition-colors hover:text-primary" href="#resources">Resources</a>
+                <a class="text-sm font-medium transition-colors hover:text-primary" href="#contact">Contact</a>
+                <a target="_blank" class="btn btn-primary" href="https://calendly.com/joniwoods/virtual-coffee">Book Call</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Transformation Form Section -->
+        <section id="transform" class="px-0 md:container space-y-6 py-4 dark:bg-transparent md:py-6 lg:py-10">
+            <div class="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+                <h2 class="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+                    Get Your Free <span class="gradient-text">Transformation</span> Roadmap
+                </h2>
+                <p class="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+                    Tell me about your situation and I'll send you personalized insights and resources to begin your healing journey.
+                </p>
+            </div>
+            
+            <div class="mx-auto max-w-[58rem]">
+                <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
+                    <div class="p-6">
+                        <form id="transformation-form" class="space-y-6">
+                            <!-- Hidden fields for Web3Forms configuration -->
+                            <input type="hidden" name="subject" value="New Transformation Roadmap Request">
+                            <input type="hidden" name="from_name" value="Joni Woods Website">
+                            
+                            <!-- Bot protection - hidden honeypot field -->
+                            <input type="checkbox" name="botcheck" class="hidden" style="display: none;" tabindex="-1">
+                            
+                            <div class="grid gap-4 sm:grid-cols-2">
+                                <div class="space-y-2">
+                                    <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="name">Your Name *</label>
+                                    <input class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" 
+                                           id="name" name="name" placeholder="Enter your name" required/>
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="email">Your Email *</label>
+                                    <input type="email" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" 
+                                           id="email" name="email" placeholder="your.email@example.com" required/>
+                                </div>
+                            </div>
+                            
+                            <div class="space-y-2">
+                                <label class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" for="support">What type of support interests you most?</label>
+                                <select name="support_type" id="support" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50">
+                                    <option value="">Select an option...</option>
+                                    <option value="Individual Coaching">Individual Coaching</option>
+                                    <option value="Relationship Coaching">Relationship Coaching</option>
+                                    <option value="Corporate Culture Strategy">Corporate Culture Strategy</option>
+                                    <option value="Speaking & Workshops">Speaking & Workshops</option>
+                                    <option value="General Information">General Information</option>
+                                </select>
+                            </div>
+                            
+                            <div class="flex justify-center">
+                                <button class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-11 rounded-md px-8 w-full sm:w-auto bg-jw-burgundy hover:bg-jw-rust" type="submit">
+                                    Get My Free Transformation Roadmap →
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Load the secure form handler -->
+    <script src="form-handler.js"></script>
+</body>
+</html>

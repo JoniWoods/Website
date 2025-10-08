@@ -1,13 +1,11 @@
-
-import { NextRequest, NextResponse } from 'next/server';
-
-export async function POST(request: NextRequest) {
+export async function onRequestPost(context) {
   try {
+    const request = context.request;
     const body = await request.json();
     const { name, email, supportType } = body;
 
     // Map support type to readable subject
-    const supportTypeLabels: { [key: string]: string } = {
+    const supportTypeLabels = {
       individual: "Individual Coaching",
       corporate: "Corporate Culture Strategy",
       speaking: "Speaking & Workshops",
@@ -40,19 +38,45 @@ This form was submitted from joniwoods.com requesting the Transformation Roadmap
     const result = await response.json();
 
     if (result.success) {
-      return NextResponse.json({ 
+      return new Response(JSON.stringify({ 
         success: true, 
         message: 'Form submitted successfully' 
-      }, { status: 200 });
+      }), {
+        status: 200,
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Methods': 'POST',
+          'Access-Control-Allow-Headers': 'Content-Type'
+        }
+      });
     } else {
       throw new Error('Web3Forms submission failed');
     }
     
   } catch (error) {
     console.error('Error processing form submission:', error);
-    return NextResponse.json(
-      { success: false, message: 'Failed to process form submission' },
-      { status: 500 }
-    );
+    return new Response(JSON.stringify({
+      success: false,
+      message: 'There was an error submitting the form. Please try again.'
+    }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      }
+    });
   }
+}
+
+// Handle preflight requests
+export async function onRequestOptions(context) {
+  return new Response(null, {
+    status: 200,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type'
+    }
+  });
 }

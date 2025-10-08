@@ -6,7 +6,7 @@ export function BookBanner() {
   return (
     <section className="w-screen relative left-[50%] right-[50%] -mx-[50vw] bg-white">
       <Link 
-        href="https://books2read.com/u/mq2K7v" 
+        href="#book" 
         target="_blank"
         className="block w-full hover:opacity-90 transition-opacity"
       >
