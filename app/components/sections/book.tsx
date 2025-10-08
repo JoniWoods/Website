@@ -19,14 +19,9 @@ export function Book() {
                 className="object-contain"
               />
             </div>
-            <Button 
-              asChild 
-              className="bg-jw-blue text-white border-2 border-jw-blue hover:bg-jw-blue/60 hover:text-white"
-            >
-              <Link href="https://books2read.com/u/mq2K7v" target="_blank">
-                Available on All Platforms
-              </Link>
-            </Button>
+            <div className="text-3xl font-semibold text-muted-foreground text-center">
+              Available on All Platforms
+            </div>
           </div>
         </div>
         
