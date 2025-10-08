@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="w-screen relative left-[50%] right-[50%] -mx-[50vw] bg-white bg-muted/50">
+    <section className="w-screen relative left-[50%] right-[50%] -mx-[50vw] bg-muted/50">
       <div className="container mx-auto px-4 md:px-8">
         {/* Mobile/Tablet Layout - Image First, Then Text */}
         <div className="md:hidden">
