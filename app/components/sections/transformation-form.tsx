@@ -60,7 +60,7 @@ This form was submitted from joniwoods.com requesting the Transformation Roadmap
         
         // Auto-open transformation roadmap after 1 second
         setTimeout(() => {
-          window.open('/Transformation_Roadmap_Webpage.html', '_blank');
+          window.open('/transformation_roadmap.html', '_blank');
         }, 1000);
       } else {
         alert('Error: ' + (result.message || 'Form submission failed. Please try again.'));
