@@ -5,9 +5,10 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="w-full bg-white">
-      {/* Mobile/Tablet Layout - Image First, Then Text */}
-      <div className="md:hidden">
+    <section className="w-screen relative left-[50%] right-[50%] -mx-[50vw] bg-muted/50">
+      <div className="container mx-auto px-4 md:px-8">
+        {/* Mobile/Tablet Layout - Image First, Then Text */}
+        <div className="md:hidden">
         {/* Mobile Hero Image - Full Width */}
         <div className="w-full">
           <Image
@@ -32,12 +33,12 @@ export function Hero() {
             
             <div className="flex flex-col gap-3 w-full pt-2">
               <Button size="default" asChild className="bg-jw-blue hover:bg-jw-blue/80 w-full">
-                <Link href="https://books2read.com/u/mq2K7v" target="_blank">
+                <a href="/Explore My Book.pdf" target="_blank" rel="noopener noreferrer">
                   Explore My Book
                   <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
-                </Link>
+                </a>
               </Button>
               <Button variant="outline" size="default" asChild className="border-jw-charcoal text-jw-charcoal hover:bg-jw-charcoal/5 w-full">
                 <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">
@@ -65,12 +66,12 @@ export function Hero() {
               
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-2 md:pt-4">
                 <Button size="lg" asChild className="bg-jw-blue hover:bg-jw-blue/80">
-                  <Link href="https://books2read.com/u/mq2K7v" target="_blank">
+                  <a href="/Explore My Book.pdf" target="_blank" rel="noopener noreferrer">
                     Explore My Book
                     <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                  </Link>
+                  </a>
                 </Button>
                 <Button variant="outline" size="lg" asChild className="border-jw-charcoal text-jw-charcoal hover:bg-jw-charcoal/5">
                   <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">
@@ -93,6 +94,7 @@ export function Hero() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

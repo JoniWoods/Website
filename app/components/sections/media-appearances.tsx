@@ -31,20 +31,21 @@ const appearances = [
 
 export function MediaAppearances() {
   return (
-    <section className="px-0 md:container space-y-6 py-4 md:py-6 lg:py-10">
-      <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+    <section className="w-screen relative left-[50%] right-[50%] -mx-[50vw] space-y-6 py-4 md:py-6 lg:py-10" style={{backgroundColor: "#fff16d"}}>
+      <div className="container mx-auto px-4 md:px-8">
+        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
         <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
           Recent{" "}
           <span className="gradient-text">
             Media Appearances
           </span>
         </h2>
-        <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+        <p className="max-w-[85%] leading-normal sm:text-lg sm:leading-7 text-foreground mb-8">
           Sharing insights on transformation, relationships, and personal growth across various media platforms.
         </p>
       </div>
       
-      <div className="mx-auto grid justify-center gap-6 sm:grid-cols-1 md:max-w-[76rem] md:grid-cols-3">
+      <div className="mx-auto grid justify-center gap-6 sm:grid-cols-1 md:max-w-[76rem] md:grid-cols-3 mt-8">
         {appearances.map((appearance, index) => (
           <a key={index} href={appearance.url} target="_blank" rel="noopener noreferrer">
             <Card className="group cursor-pointer transition-all hover:scale-105 h-full flex flex-col">
@@ -75,7 +76,7 @@ export function MediaAppearances() {
       </div>
       
       <div className="flex justify-center mt-8 px-4 md:px-0">
-        <Button asChild className="bg-jw-burgundy hover:bg-jw-rust w-full sm:w-auto" size="lg">
+        <Button asChild className="bg-jw-burgundy hover:bg-jw-rust w-full sm:w-auto shadow-[0_1px_0px_0px_rgba(0,0,0,0.1)]" size="lg" style={{ boxShadow: '0 1px 0px 0px rgba(0,0,0,0.1)' }}>
           <Link href="https://www.youtube.com/@joniwoods7141" target="_blank">
             View More Content
             <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -83,6 +84,7 @@ export function MediaAppearances() {
             </svg>
           </Link>
         </Button>
+      </div>
       </div>
     </section>
   );

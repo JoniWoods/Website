@@ -6,8 +6,9 @@ import Link from "next/link";
 
 export function Book() {
   return (
-    <section id="book" className="px-0 md:container space-y-6 py-4 dark:bg-transparent md:py-6 lg:py-10">
-      <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
+    <section id="book" className="w-screen relative left-[50%] right-[50%] -mx-[50vw] space-y-6 py-4 md:py-6 lg:py-10 bg-muted/50">
+      <div className="container mx-auto px-4 md:px-8">
+        <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
         <div className="relative overflow-hidden rounded-lg bg-background p-6">
           <div className="flex flex-col items-center justify-center h-full">
             <div className="relative w-full max-w-sm aspect-[3/4] mb-6">
@@ -18,14 +19,9 @@ export function Book() {
                 className="object-contain"
               />
             </div>
-            <Button 
-              asChild 
-              className="bg-jw-blue text-white border-2 border-jw-blue hover:bg-jw-blue/60 hover:text-white"
-            >
-              <Link href="https://books2read.com/u/mq2K7v" target="_blank">
-                Available on All Platforms
-              </Link>
-            </Button>
+            <div className="text-3xl font-semibold text-muted-foreground text-center">
+              Available on All Platforms
+            </div>
           </div>
         </div>
         
@@ -75,7 +71,7 @@ export function Book() {
                 <Badge variant="outline">Hardcover $27.99</Badge>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-2 justify-center">
+              <div className="flex flex-col sm:flex-row gap-2">
                 <Button asChild className="bg-jw-burgundy hover:bg-jw-rust w-full sm:w-auto">
                   <Link href="https://books2read.com/u/mq2K7v" target="_blank">
                     Buy Now
@@ -84,15 +80,16 @@ export function Book() {
                     </svg>
                   </Link>
                 </Button>
-                <Button variant="outline" asChild className="w-full sm:w-auto">
-                  <Link href="/Joni Woods Media Kit_Final.pdf" target="_blank">
+                <Button variant="outline" asChild className="w-full sm:w-auto" style={{backgroundColor: "#e1662a", color: "white", borderColor: "#e1662a"}}>
+                  <a href="/Explore My Book.pdf" target="_blank" rel="noopener noreferrer">
                     Book Preview
-                  </Link>
+                  </a>
                 </Button>
               </div>
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );
