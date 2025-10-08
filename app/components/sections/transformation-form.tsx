@@ -31,16 +31,29 @@ export function TransformationForm() {
     setLoading(true);
 
     try {
-      // Send form data to API
-      const response = await fetch('/api/transformation-form', {
+      // Submit directly to Web3Forms
+      const formData_web3 = new FormData();
+      formData_web3.append('access_key', '3ca23ba3-c21b-4bf0-817a-10d1ace488ea');
+      formData_web3.append('to', 'joniwoodswebsite@gmail.com');
+      formData_web3.append('name', formData.name);
+      formData_web3.append('email', formData.email);
+      formData_web3.append('subject', `New Transformation Roadmap Request: ${formData.supportType}`);
+      formData_web3.append('message', `
+Name: ${formData.name}
+Email: ${formData.email}
+Support Type: ${formData.supportType}
+
+This form was submitted from joniwoods.com requesting the Transformation Roadmap.
+      `.trim());
+
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
+        body: formData_web3
       });
 
-      if (response.ok) {
+      const result = await response.json();
+
+      if (result.success) {
         const personalizedMsg = generatePersonalizedResponse(formData);
         setPersonalizedResponse(personalizedMsg);
         setSubmitted(true);
@@ -50,9 +63,10 @@ export function TransformationForm() {
           window.open('/Transformation_Roadmap_Webpage.html', '_blank');
         }, 1000);
       } else {
-        alert('There was an error submitting the form. Please try again.');
+        alert('Error: ' + (result.message || 'Form submission failed. Please try again.'));
       }
     } catch (error) {
+      console.error('Form submission error:', error);
       alert('There was an error submitting the form. Please try again.');
     } finally {
       setLoading(false);
