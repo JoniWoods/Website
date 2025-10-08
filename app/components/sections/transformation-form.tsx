@@ -292,15 +292,6 @@ Joni`;
                     Let's Have Coffee!
                   </Link>
                 </Button>
-                <Button 
-                  asChild 
-                  className="bg-white hover:bg-gray-50 text-black border border-gray-200 w-full sm:w-auto shadow-[0_1px_0px_0px_rgba(0,0,0,0.1)]"
-                  style={{ boxShadow: '0 1px 0px 0px rgba(0,0,0,0.1)' }}
-                >
-                  <a href="mailto:joniwoods@gmail.com?subject=I%20Have%20A%20Question">
-                    Ask A Question
-                  </a>
-                </Button>
               </div>
             </CardContent>
           </Card>
