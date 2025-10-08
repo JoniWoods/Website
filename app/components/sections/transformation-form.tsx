@@ -127,21 +127,24 @@ This form was submitted from joniwoods.com requesting the Transformation Roadmap
       book: "book study and coaching combination for deep personal transformation"
     };
 
-    return `Hi ${data.name}! 
+    const firstName = data.name.split(' ')[0] || data.name;
+
+    return `Hi ${firstName}! 
 
 Thank you for your interest in connecting! I'm excited to support you on your transformation journey.
 
 Based on your interest in ${responses[data.supportType as keyof typeof responses]}, I believe we can create powerful change together.
 
-Here's what I'm sending to your email immediately:
-✨ A personalized roadmap for your transformation journey
-✨ My "Emotional Safety Checklist" - a tool I use with all my clients
+You will begin receiving our newsletter as soon as this week!
 
 Remember: You don't have to have it all figured out to take the next step. You just need to be willing to begin.
 
 The fact that you're here shows you're ready for real transformation.
 
-Let's hop on a free discovery call so I can learn more about your unique situation and see how I can best support your journey.`;
+Let's hop on a free discovery call so I can learn more about your unique situation and see how I can best support your journey.
+
+Sincerely,
+Joni`;
   };
 
   const handleReset = () => {
@@ -232,10 +235,13 @@ Let's hop on a free discovery call so I can learn more about your unique situati
                   />
                 </div>
                 
-                <div className="flex justify-center">
+                <div className="flex flex-col items-center space-y-3">
                   <Button type="submit" className="w-full sm:w-auto bg-jw-burgundy hover:bg-jw-rust" size="lg" disabled={loading}>
                     {loading ? "Creating Your Personalized Roadmap..." : "Get My Free Transformation Roadmap →"}
                   </Button>
+                  <p className="text-xs text-muted-foreground text-center max-w-md">
+                    By submitting this form, you agree to receive our newsletter along with other great value. We will never spam you or sell your information.
+                  </p>
                 </div>
               </form>
             </CardContent>
@@ -255,7 +261,7 @@ Let's hop on a free discovery call so I can learn more about your unique situati
                 </CardContent>
               </Card>
               <CardDescription className="text-center mb-6">
-                📧 Check your email - I've sent this roadmap plus your free resources!
+                📧 Keep an eye on your email for our newsletter!
               </CardDescription>
               <div className="flex flex-col sm:flex-row gap-2 justify-center">
                 <Button 
@@ -268,14 +274,19 @@ Let's hop on a free discovery call so I can learn more about your unique situati
                 </Button>
                 <Button 
                   asChild 
-                  className="bg-jw-gold hover:bg-jw-gold/80 text-black w-full sm:w-auto"
+                  className="bg-jw-blue hover:bg-jw-blue/80 text-white w-full sm:w-auto"
                 >
                   <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">
-                    Book Discovery Call
+                    Let's Have Coffee!
                   </Link>
                 </Button>
-                <Button variant="outline" onClick={handleReset} className="w-full sm:w-auto">
-                  Ask Another Question
+                <Button 
+                  asChild 
+                  className="bg-jw-gold hover:bg-jw-gold/80 text-black w-full sm:w-auto"
+                >
+                  <Link href="mailto:?subject=I%20Have%20A%20Question">
+                    Ask A Question
+                  </Link>
                 </Button>
               </div>
             </CardContent>
