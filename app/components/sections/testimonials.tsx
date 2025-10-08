@@ -38,16 +38,16 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="w-screen relative left-[50%] right-[50%] -mx-[50vw] space-y-8 py-8 md:py-10 lg:py-16" style={{backgroundColor: "#530248"}}>
+    <section id="testimonials" className="w-screen relative left-[50%] right-[50%] -mx-[50vw] space-y-6 py-4 md:py-6 lg:py-10" style={{backgroundColor: "#530248"}}>
       <div className="container mx-auto px-4 md:px-8">
-        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-6 text-center">
-        <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl mt-6 mb-10" style={{color: "#ffffff"}}>
+        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+        <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl" style={{color: "#ffffff"}}>
           Transformation{" "}
           <span className="gradient-text" style={{color: "#ffffff"}}>
             Stories
           </span>
         </h2>
-        <p className="w-full px-4 leading-normal sm:text-lg sm:leading-7 mb-12 mt-4" style={{ textWrap: 'balance', color: "#ffffff" }}>
+        <p className="w-full px-4 leading-normal sm:text-lg sm:leading-7" style={{ textWrap: 'balance', color: "#ffffff" }}>
           Real stories from individuals, couples, and organizations who chose healing over staying stuck.
         </p>
       </div>

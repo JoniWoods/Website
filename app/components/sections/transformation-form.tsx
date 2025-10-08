@@ -155,17 +155,17 @@ Joni`;
   };
 
   return (
-    <section id="transform" className="w-screen relative left-[50%] right-[50%] -mx-[50vw] space-y-8 py-6 md:py-8 lg:py-12 bg-muted/50">
+    <section id="transform" className="w-screen relative left-[50%] right-[50%] -mx-[50vw] space-y-6 py-4 md:py-6 lg:py-10 bg-muted/50">
       <div className="container mx-auto px-4 md:px-8">
-        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-6 text-center">
-        <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl mt-4 mb-10">
+        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+        <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
           Get Your Free{" "}
           <span className="gradient-text">
             Transformation
           </span>{" "}
           Roadmap
         </h2>
-        <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7 mb-10 mt-6">
+        <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
           Tell me about your situation and I'll send you personalized insights and resources to begin your healing journey.
           <br />
         </p>
