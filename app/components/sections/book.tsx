@@ -86,7 +86,7 @@ export function Book() {
                   </Link>
                 </Button>
                 <Button variant="outline" asChild className="w-full sm:w-auto" style={{backgroundColor: "#e1662a", color: "white", borderColor: "#e1662a"}}>
-                  <Link href="/transformation_roadmap.pdf" target="_blank">
+                  <Link href="/Explore My Book.pdf" target="_blank">
                     Book Preview
                   </Link>
                 </Button>
