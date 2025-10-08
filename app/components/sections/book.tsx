@@ -28,7 +28,7 @@ export function Book() {
         <div className="relative overflow-hidden rounded-lg bg-background p-2">
           <div className="flex flex-col justify-between rounded-md p-6 h-full">
             <div className="space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-10">
                 Get the <span className="gradient-text">Book</span>
               </h2>
               <h3 className="text-xl font-semibold text-muted-foreground">

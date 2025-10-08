@@ -41,7 +41,7 @@ export function Testimonials() {
     <section id="testimonials" className="w-screen relative left-[50%] right-[50%] -mx-[50vw] space-y-8 py-8 md:py-10 lg:py-16" style={{backgroundColor: "#530248"}}>
       <div className="container mx-auto px-4 md:px-8">
         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-6 text-center">
-        <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl mt-6 mb-8" style={{color: "#ffffff"}}>
+        <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl mt-6 mb-10" style={{color: "#ffffff"}}>
           Transformation{" "}
           <span className="gradient-text" style={{color: "#ffffff"}}>
             Stories
