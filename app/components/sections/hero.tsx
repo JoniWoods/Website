@@ -5,9 +5,10 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="w-full bg-white bg-muted/50">
-      {/* Mobile/Tablet Layout - Image First, Then Text */}
-      <div className="md:hidden">
+    <section className="w-screen relative left-[50%] right-[50%] -mx-[50vw] bg-white bg-muted/50">
+      <div className="container mx-auto px-4 md:px-8">
+        {/* Mobile/Tablet Layout - Image First, Then Text */}
+        <div className="md:hidden">
         {/* Mobile Hero Image - Full Width */}
         <div className="w-full">
           <Image
@@ -93,6 +94,7 @@ export function Hero() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

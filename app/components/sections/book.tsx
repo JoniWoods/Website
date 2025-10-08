@@ -6,8 +6,9 @@ import Link from "next/link";
 
 export function Book() {
   return (
-    <section id="book" className="px-0 md:container space-y-6 py-4 dark:bg-transparent md:py-6 lg:py-10 bg-muted/50">
-      <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
+    <section id="book" className="w-screen relative left-[50%] right-[50%] -mx-[50vw] space-y-6 py-4 md:py-6 lg:py-10 bg-muted/50">
+      <div className="container mx-auto px-4 md:px-8">
+        <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-2">
         <div className="relative overflow-hidden rounded-lg bg-background p-6">
           <div className="flex flex-col items-center justify-center h-full">
             <div className="relative w-full max-w-sm aspect-[3/4] mb-6">
@@ -93,6 +94,7 @@ export function Book() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </section>
   );

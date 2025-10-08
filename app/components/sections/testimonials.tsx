@@ -38,8 +38,9 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="px-0 md:container space-y-6 py-4 dark:bg-transparent md:py-6 lg:py-10" style={{backgroundColor: "#530248"}}>
-      <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+    <section id="testimonials" className="w-screen relative left-[50%] right-[50%] -mx-[50vw] space-y-6 py-4 md:py-6 lg:py-10" style={{backgroundColor: "#530248"}}>
+      <div className="container mx-auto px-4 md:px-8">
+        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
         <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl" style={{color: "#ffffff"}}>
           Transformation{" "}
           <span className="gradient-text" style={{color: "#ffffff"}}>
@@ -76,6 +77,7 @@ export function Testimonials() {
             Begin Your Journey
           </Link>
         </Button>
+      </div>
       </div>
     </section>
   );
