@@ -4,21 +4,32 @@ This guide enables AI coding agents to work productively in the Joni Woods websi
 
 ## 🏗️ Architecture Overview
 - **Static Site**: Built with Next.js 14, exported to static HTML for deployment (see `index.html`, `404.html`).
-- **Source Directory**: All development occurs in `/app` (Next.js app directory). Production files are minified and placed at root.
-- **Assets**: Images in `/images/`, fonts in `/fonts/`, compiled assets in `/_next/static/`.
-- **Component Structure**: React components in `/app/components/`, organized by feature (e.g., `sections/hero.tsx`, `ui/`).
-- **Styling**: Tailwind CSS, with custom brand colors in CSS variables. Main styles in `/app/globals.css`.
+- **Nested Structure**: Development in `/app/app/` (Next.js app directory), production at repo root.
+- **Assets**: Images in `/images/` (shared), fonts in `/fonts/`, compiled assets in `/_next/static/`.
+- **Component Structure**: React components in `/app/components/`, organized by feature (`sections/hero.tsx`, `ui/` with shadcn components).
+- **Styling**: Tailwind CSS with custom Joni Woods brand colors (`jw-burgundy`, `jw-rust`, `jw-yellow`) defined in `tailwind.config.ts`. CSS variables in `/app/app/globals.css`.
+- **Forms**: Lead capture via Cloudflare Functions (`/functions/api/transformation-form.js`) using Web3Forms service.
 
 ## 🔧 Developer Workflows
+- **Build System**: 
+  ```bash
+  cd /app && npm run build  # Runs next build + postbuild.js
+  # OR use the shell script:
+  ./build-with-postbuild.sh
+  ```
 - **Content/Code Changes**:
-  1. Edit source files in `/app` (e.g., `/app/page.tsx`, `/app/components/`).
-  2. Run Next.js build and static export (see `build-with-postbuild.sh` for custom build steps).
-  3. Replace `index.html` and assets at root with new exports.
+  1. Edit source files in `/app/app/` (Next.js app directory structure: `/app/app/page.tsx`, `/app/components/`).
+  2. Run build command from `/app` directory.
+  3. Built files automatically exported to `/app/.next/` then copied to root by `postbuild.js`.
+- **Critical Build Process**: 
+  - `postbuild.js` copies static exports from `.next/` to root directory
+  - Production files end up as `index.html`, `404.html` at repo root
+  - Static assets copied to `/_next/static/` structure
 - **Quick Fixes**:
-  - Images: Replace in `/images/`.
-  - Styles: Edit `/app/globals.css` and rebuild.
-  - Content: Update `/app/page.tsx` and rebuild.
-- **Deployment**: Push to `main` branch; Cloudflare Pages auto-deploys. See deployment docs in `../joniwoods-deployment-docs/`.
+  - Images: Replace in `/images/` (shared by both dev and production).
+  - Styles: Edit `/app/app/globals.css` and rebuild.
+  - Content: Update `/app/app/page.tsx` and rebuild.
+- **Deployment**: Push to `main` branch; Cloudflare Pages auto-deploys from root files.
 
 ## 🧩 Project-Specific Conventions
 - **No Backend**: All interactivity is client-side or via external services (Calendly, social media, etc.).
@@ -34,19 +45,23 @@ This guide enables AI coding agents to work productively in the Joni Woods websi
 - **Analytics**: Google Analytics and social pixel tracking (ready for integration).
 
 ## 🛠 Key Files & Directories
+- `/app/app/` — Next.js app directory (main page, layout, globals.css)
 - `/app/components/` — React components (feature and UI)
-- `/app/page.tsx` — Main page content
-- `/app/globals.css` — Global styles
-- `/images/` — All images/media
-- `/fonts/` — Custom fonts
+- `/app/components/sections/` — Page sections (hero, about, services, etc.)
+- `/app/components/ui/` — Reusable shadcn/ui components
+- `/images/` — All images/media (shared between dev and prod)
+- `/fonts/` — Custom fonts (Myriad Pro family)
+- `/functions/api/` — Cloudflare Functions for form handling
 - `/404.html`, `/index.html` — Production static files
 - `build-with-postbuild.sh` — Custom build script
-- `../joniwoods-deployment-docs/` — Deployment guides
+- `postbuild.js` — Copies static exports to root after Next.js build
 
 ## ⚡ Examples of Patterns
-- **Hero Section**: See `/app/components/sections/hero.tsx` for book banner and intro.
-- **Transformation Form**: Lead capture in `/functions/api/transformation-form.js`.
-- **Navigation**: Responsive menu in `/app/components/navigation.tsx`.
+- **Page Structure**: Single-page app in `/app/app/page.tsx` importing all section components
+- **Section Components**: Each major site section is a React component in `/sections/` (Hero, Book, Media, Services, etc.)
+- **Brand Colors**: Use `jw-burgundy`, `jw-rust`, `jw-yellow` classes or CSS variables (`--primary`, `--accent`, `--secondary`)
+- **Form Handling**: Client-side forms submit to Cloudflare Functions (`/functions/api/transformation-form.js`) which forward to Web3Forms
+- **Static Export**: `next.config.js` configured with `output: 'export'` for static site generation
 
 ## 🚨 Cautions
 - Do not edit minified production files directly; always update source in `/app` and rebuild.

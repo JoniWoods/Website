@@ -262,7 +262,7 @@ Joni`;
               <div className="flex justify-center mb-6">
                 <Image 
                   src="/images/JoniWoods_logo.png" 
-                  alt="Joni Woods Logo"
+                  alt="Joni Woods logo - certified life coach, author and transformation expert"
                   width={60}
                   height={60}
                   className="object-contain"

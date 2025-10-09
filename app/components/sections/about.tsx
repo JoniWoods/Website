@@ -25,7 +25,7 @@ export function About() {
         <div className="block md:hidden rounded-lg overflow-hidden mx-auto max-w-sm">
           <img
             src="/images/JoniWoods_SideView.webp"
-            alt="Joni Woods - Author and Life Coach"
+            alt="Joni Woods, founder of Journey Coaching, professional certified life coach and author in elegant portrait showcasing her warmth and expertise"
             className="w-full h-auto object-cover rounded-lg"
             style={{ objectPosition: 'center center' }}
           />
@@ -72,7 +72,7 @@ export function About() {
             <div className="flex flex-col justify-between rounded-md overflow-hidden h-full">
               <img
                 src="/images/JoniWoods_SideView.webp"
-                alt="Joni Woods - Author and Life Coach"
+                alt="Joni Woods, founder of Journey Coaching, professional certified life coach and author in elegant portrait showcasing her warmth and expertise"
                 className="w-full h-full object-cover rounded-md"
                 style={{ objectPosition: 'center center' }}
               />

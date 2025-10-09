@@ -24,7 +24,7 @@ export default function NotFound() {
           <div style={{ order: 2 }}>
             <Image
               src="/images/JoniWoods_logo.png"
-              alt="Joni Woods Logo"
+              alt="Joni Woods logo - certified life coach, author and transformation expert"
               width={300}
               height={200}
               style={{ margin: '0 auto 1.5rem', opacity: 0.9 }}

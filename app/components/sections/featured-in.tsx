@@ -71,7 +71,7 @@ export function FeaturedIn() {
               <div className="relative flex items-center justify-center h-[50px]">
                 <Image
                   src={feature.logo}
-                  alt={`${feature.name} logo`}
+                  alt={`${feature.name} logo - where Joni Woods has been featured as a certified life coach and author`}
                   width={feature.width}
                   height={feature.height}
                   className="object-contain max-h-full w-auto"
@@ -103,7 +103,7 @@ export function FeaturedIn() {
                 <div className="relative flex items-center justify-center h-[50px]">
                   <Image
                     src={feature.logo}
-                    alt={`${feature.name} logo`}
+                    alt={`${feature.name} logo - where Joni Woods has been featured as a certified life coach and author`}
                     width={feature.width}
                     height={feature.height}
                     className="object-contain max-h-full w-auto"
@@ -124,7 +124,7 @@ export function FeaturedIn() {
                 <div className="relative flex items-center justify-center h-[50px]">
                   <Image
                     src={feature.logo}
-                    alt={`${feature.name} logo`}
+                    alt={`${feature.name} logo - where Joni Woods has been featured as a certified life coach and author`}
                     width={feature.width}
                     height={feature.height}
                     className="object-contain max-h-full w-auto"

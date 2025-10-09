@@ -13,11 +13,12 @@ export function Hero() {
         <div className="w-full">
           <Image
             src="/images/Joni_Woods_Author_Portrait_Optimized.jpg"
-            alt="Joni Woods"
+            alt="Joni Woods, certified life coach and author of 'Burned, Blocked, and Better Than Ever,' smiling warmly in professional portrait"
             width={600}
             height={800}
             className="w-full h-auto"
             priority
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
         
@@ -85,11 +86,12 @@ export function Hero() {
             <div className="relative w-full">
               <Image
                 src="/images/Joni_Woods_Author_Portrait_Optimized.jpg"
-                alt="Joni Woods"
+                alt="Joni Woods, certified life coach and author of 'Burned, Blocked, and Better Than Ever,' smiling warmly in professional portrait"
                 width={800}
                 height={1000}
                 className="w-full h-auto"
                 priority
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>

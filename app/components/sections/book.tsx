@@ -14,7 +14,7 @@ export function Book() {
             <div className="relative w-full max-w-sm aspect-[3/4] mb-6">
               <Image
                 src="/images/Woods_FrontCover_3D.png"
-                alt="Burned, Blocked, and Better Than Ever - Book Cover"
+                alt="Burned, Blocked, and Better Than Ever book cover by Joni Woods featuring inspiring design for healing and transformation"
                 fill
                 className="object-contain"
               />

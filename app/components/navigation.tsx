@@ -19,11 +19,11 @@ export function Navigation() {
   }, []);
 
   const navItems = [
+    { label: "Book", href: "#book" },
     { label: "About", href: "#about" },
     { label: "Services", href: "#services" },
-    { label: "Book", href: "#book" },
     { label: "Testimonials", href: "#testimonials" },
-    { label: "Resources", href: "#resources" },
+    { label: "Resources", href: "#transform" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -35,7 +35,7 @@ export function Navigation() {
         <Link href="/" className="flex items-center space-x-2">
           <Image 
             src="/images/JoniWoods_logo.png" 
-            alt="Joni Woods" 
+            alt="Joni Woods logo - certified life coach, author and transformation expert" 
             width={40} 
             height={40}
             className="rounded-full"

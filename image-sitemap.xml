@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://joniwoods.com</loc>
+    <lastmod>2025-10-09T21:08:35.446Z</lastmod>
+    <image:image>
+      <image:loc>https://joniwoods.com/images/Joni_Woods_Author_Portrait_Optimized.jpg</image:loc>
+      <image:caption>Joni Woods, certified life coach and author of Burned, Blocked, and Better Than Ever</image:caption>
+      <image:title>Joni Woods Professional Portrait</image:title>
+      <image:license>https://joniwoods.com</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://joniwoods.com/images/JoniWoods_SideView.webp</image:loc>
+      <image:caption>Joni Woods, founder of Journey Coaching, professional certified life coach and author</image:caption>
+      <image:title>Joni Woods Professional Side Portrait</image:title>
+      <image:license>https://joniwoods.com</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://joniwoods.com/images/Woods_FrontCover_3D.png</image:loc>
+      <image:caption>Burned, Blocked, and Better Than Ever book cover by Joni Woods featuring inspiring design for healing and transformation</image:caption>
+      <image:title>Burned, Blocked, and Better Than Ever Book Cover</image:title>
+      <image:license>https://joniwoods.com</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://joniwoods.com/images/JoniWoods_logo.png</image:loc>
+      <image:caption>Joni Woods logo - certified life coach, author and transformation expert</image:caption>
+      <image:title>Joni Woods Official Logo</image:title>
+      <image:license>https://joniwoods.com</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://joniwoods.com/images/book-banner.png</image:loc>
+      <image:caption>Burned, Blocked, and Better Than Ever - A Raw Journey of Healing by Joni Woods, available on all platforms</image:caption>
+      <image:title>Book Banner - Burned, Blocked, and Better Than Ever</image:title>
+      <image:license>https://joniwoods.com</image:license>
+    </image:image>
+  </url>
+</urlset>

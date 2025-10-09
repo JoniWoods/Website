@@ -13,7 +13,7 @@ export default function NotFound() {
           <div className="order-2 md:order-1">
             <Image
               src="/images/JoniWoods_logo.png"
-              alt="Joni Woods Logo"
+              alt="Joni Woods logo - certified life coach, author and transformation expert"
               width={300}
               height={200}
               className="mx-auto mb-6 opacity-80"

@@ -14,7 +14,7 @@ export function BookBanner() {
           <div className="relative w-full h-auto">
             <Image
               src="/images/book-banner.png"
-              alt="Burned, Blocked, and Better Than Ever - A Raw Journey of Healing"
+              alt="Burned, Blocked, and Better Than Ever - A Raw Journey of Healing by Joni Woods, available on all platforms for personal transformation and recovery"
               width={1440}
               height={192}
               className="w-full h-auto"

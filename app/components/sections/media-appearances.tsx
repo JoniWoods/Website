@@ -52,9 +52,11 @@ export function MediaAppearances() {
               <div className="relative aspect-video bg-muted rounded-t-lg overflow-hidden">
                 <Image
                   src={appearance.image}
-                  alt={`${appearance.title} - ${appearance.description}`}
+                  alt={`Joni Woods featured on ${appearance.title} discussing ${appearance.description} - certified life coach and author of Burned Blocked and Better Than Ever`}
                   fill
                   className="object-cover transition-transform group-hover:scale-110"
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
               <CardHeader className="flex-none">
