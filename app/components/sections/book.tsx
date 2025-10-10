@@ -18,6 +18,9 @@ export function Book() {
                 alt="Burned, Blocked, and Better Than Ever book cover by Joni Woods featuring inspiring design for healing and transformation"
                 fill
                 className="object-contain"
+                loading="lazy"
+                quality={85}
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
             </div>
             <div className="text-3xl font-semibold text-muted-foreground text-center">

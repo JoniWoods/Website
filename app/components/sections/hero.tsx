@@ -18,8 +18,9 @@ export function Hero() {
             width={600}
             height={800}
             className="w-full h-auto"
-            priority
+            priority={true}
             sizes="(max-width: 768px) 100vw, 50vw"
+            quality={85}
           />
         </div>
         
@@ -91,8 +92,9 @@ export function Hero() {
                 width={800}
                 height={1000}
                 className="w-full h-auto"
-                priority
+                priority={true}
                 sizes="(max-width: 768px) 100vw, 50vw"
+                quality={85}
               />
             </div>
           </div>

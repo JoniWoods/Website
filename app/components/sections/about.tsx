@@ -29,6 +29,9 @@ export function About() {
             alt="Joni Woods, founder of Journey Coaching, professional certified life coach and author in elegant portrait showcasing her warmth and expertise"
             className="w-full h-auto object-cover rounded-lg"
             style={{ objectPosition: 'center center' }}
+            loading="lazy"
+            width="400"
+            height="500"
           />
         </div>
         
@@ -76,6 +79,9 @@ export function About() {
                 alt="Joni Woods, founder of Journey Coaching, professional certified life coach and author in elegant portrait showcasing her warmth and expertise"
                 className="w-full h-full object-cover rounded-md"
                 style={{ objectPosition: 'center center' }}
+                loading="lazy"
+                width="600"
+                height="800"
               />
             </div>
           </div>
