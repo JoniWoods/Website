@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
+import { trackCTAClick } from "@/lib/analytics";
 
 export function About() {
   return (
@@ -59,7 +60,7 @@ export function About() {
                   className="bg-jw-blue text-white border-2 border-jw-blue hover:bg-jw-blue/60 hover:text-white w-full sm:w-auto" 
                   asChild
                 >
-                  <Link href="mailto:joniwoods@gmail.com?subject=Sign%20Me%20Up%20for%20the%20Newsletter&body=Hi%20Joni%2C%0A%0AWould%20you%20please%20add%20me%20to%20your%20email%20list%20for%20the%20newsletter%3F%0A%0AThanks%21">
+                  <Link href="mailto:joniwoods@gmail.com?subject=Sign%20Me%20Up%20for%20the%20Newsletter&body=Hi%20Joni%2C%0A%0AWould%20you%20please%20add%20me%20to%20your%20email%20list%20for%20the%20newsletter%3F%0A%0AThanks%21" onClick={trackCTAClick.getNewsletter}>
                     Get the Newsletter
                   </Link>
                 </Button>

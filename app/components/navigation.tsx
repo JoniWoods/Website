@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import { trackCTAClick } from "@/lib/analytics";
 
 export function Navigation() {
   const [isFloating, setIsFloating] = useState(false);
@@ -56,7 +57,7 @@ export function Navigation() {
             </Link>
           ))}
           <Button asChild className="bg-white text-jw-blue border-2 border-jw-blue hover:bg-jw-blue hover:text-white">
-            <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">
+            <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank" onClick={trackCTAClick.bookCall}>
               Book Call
             </Link>
           </Button>
@@ -65,7 +66,7 @@ export function Navigation() {
         {/* Mobile menu button */}
         <div className="md:hidden">
           <Button variant="ghost" size="sm" asChild className="bg-white text-jw-blue border-2 border-jw-blue hover:bg-jw-blue hover:text-white">
-            <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">
+            <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank" onClick={trackCTAClick.bookCall}>
               Book Call
             </Link>
           </Button>

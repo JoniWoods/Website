@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
+import { trackCTAClick } from "@/lib/analytics";
 
 const articles = [
   {
@@ -105,17 +106,17 @@ export function Blog() {
       <div className="mx-auto text-center space-y-4">
         <div className="flex flex-col sm:flex-row gap-2 justify-center">
           <Button asChild className="bg-jw-blue text-white hover:bg-jw-blue/80 w-full sm:w-auto">
-            <Link href="http://journeylifecoaching.life" target="_blank">
+            <Link href="http://journeylifecoaching.life" target="_blank" onClick={trackCTAClick.visitBlog}>
               Visit Blog
             </Link>
           </Button>
           <Button asChild className="bg-jw-burgundy text-white border-2 border-jw-burgundy/80 hover:bg-transparent hover:text-jw-burgundy hover:border-jw-burgundy w-full sm:w-auto">
-            <Link href="https://www.youtube.com/channel/UCQ2d3jM3TYtMq0v-LF0bOMw" target="_blank">
+            <Link href="https://www.youtube.com/channel/UCQ2d3jM3TYtMq0v-LF0bOMw" target="_blank" onClick={trackCTAClick.subscribeYouTube}>
               YouTube
             </Link>
           </Button>
           <Button asChild className="bg-jw-rust text-white hover:bg-jw-rust/80 w-full sm:w-auto">
-            <Link href="https://journeylifecoaching.life/newsletter/" target="_blank">
+            <Link href="https://journeylifecoaching.life/newsletter/" target="_blank" onClick={trackCTAClick.getNewsletter}>
               Get the Newsletter
             </Link>
           </Button>

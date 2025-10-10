@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
+import { trackCTAClick } from "@/lib/analytics";
 
 const services = [
   {
@@ -9,28 +10,32 @@ const services = [
     description: "One-on-one coaching for personal growth, relationship healing, and emotional intelligence development. Perfect for navigating life transitions and building self-awareness.",
     features: ["Personal growth coaching", "Relationship healing", "Emotional intelligence", "Life transitions"],
     cta: "Book Discovery Call",
-    href: "https://calendly.com/joniwoods/virtual-coffee"
+    href: "https://calendly.com/joniwoods/virtual-coffee",
+    trackingFn: trackCTAClick.bookDiscoveryCall
   },
   {
     title: "Corporate Culture Strategy", 
     description: "Transform your organization's culture with emotional intelligence training, leadership development, and communication workshops.",
     features: ["Leadership development", "Team communication", "Culture assessment", "Conflict resolution"],
     cta: "Schedule Consultation",
-    href: "https://calendly.com/joniwoods/virtual-coffee"
+    href: "https://calendly.com/joniwoods/virtual-coffee",
+    trackingFn: trackCTAClick.scheduleConsultation
   },
   {
     title: "Speaking & Workshops",
     description: "Engaging presentations on emotional intelligence, healthy relationships, and personal growth for conferences, organizations, and events.",
     features: ["Keynote speaking", "Interactive workshops", "Team building", "Personal development"],
     cta: "Book Speaking", 
-    href: "https://calendly.com/joniwoods/virtual-coffee"
+    href: "https://calendly.com/joniwoods/virtual-coffee",
+    trackingFn: trackCTAClick.bookSpeaking
   },
   {
     title: "Relationship Coaching",
     description: "Whether you're single, dating, married, or rebuilding after separation, learn to create emotionally safe and fulfilling relationships.",
     features: ["Communication skills", "Boundary setting", "Conflict resolution", "Relationship rebuilding"],
     cta: "Start Healing",
-    href: "https://calendly.com/joniwoods/virtual-coffee"
+    href: "https://calendly.com/joniwoods/virtual-coffee",
+    trackingFn: trackCTAClick.startHealing
   }
 ];
 
@@ -71,7 +76,7 @@ export function Services() {
               </ul>
               <div className="flex justify-center">
                 <Button asChild className="w-full sm:w-auto text-white hover:opacity-80" style={{backgroundColor: "#505155"}}>
-                  <Link href={service.href} target="_blank">
+                  <Link href={service.href} target="_blank" onClick={service.trackingFn}>
                     {service.cta}
                     <svg className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -87,7 +92,7 @@ export function Services() {
       <div className="mx-auto text-center">
         <p className="text-muted-foreground mb-4">Ready to begin your transformation journey?</p>
         <Button size="lg" asChild className="bg-jw-burgundy hover:bg-jw-rust">
-          <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">
+          <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank" onClick={trackCTAClick.scheduleConsultation}>
             Schedule Free Consultation
           </Link>
         </Button>

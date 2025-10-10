@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import Link from "next/link";
+import { trackCTAClick } from "@/lib/analytics";
 
 export function Book() {
   return (
@@ -73,7 +74,7 @@ export function Book() {
               
               <div className="flex flex-col sm:flex-row gap-2">
                 <Button asChild className="bg-jw-burgundy hover:bg-jw-rust w-full sm:w-auto">
-                  <Link href="https://books2read.com/u/mq2K7v" target="_blank">
+                  <Link href="https://books2read.com/u/mq2K7v" target="_blank" onClick={trackCTAClick.buyBook}>
                     Buy Now
                     <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -81,7 +82,7 @@ export function Book() {
                   </Link>
                 </Button>
                 <Button variant="outline" asChild className="w-full sm:w-auto" style={{backgroundColor: "#e1662a", color: "white", borderColor: "#e1662a"}}>
-                  <a href="/Explore My Book.pdf" target="_blank" rel="noopener noreferrer">
+                  <a href="/Explore My Book.pdf" target="_blank" rel="noopener noreferrer" onClick={trackCTAClick.exploreBook}>
                     Book Preview
                   </a>
                 </Button>

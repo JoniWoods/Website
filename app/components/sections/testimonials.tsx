@@ -2,6 +2,7 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { trackCTAClick } from "@/lib/analytics";
 
 const testimonials = [
   {
@@ -73,7 +74,7 @@ export function Testimonials() {
       <div className="mx-auto text-center px-4 md:px-0">
         <p className="mb-4" style={{color: "#ffffff"}}>Ready to write your own transformation story?</p>
         <Button asChild className="bg-jw-burgundy hover:bg-jw-rust w-full sm:w-auto">
-          <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">
+          <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank" onClick={trackCTAClick.bookCall}>
             Begin Your Journey
           </Link>
         </Button>

@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
+import { trackCTAClick } from "@/lib/analytics";
 
 export function Hero() {
   return (
@@ -34,7 +35,7 @@ export function Hero() {
             
             <div className="flex flex-col gap-3 w-full pt-2">
               <Button size="default" asChild className="bg-jw-blue hover:bg-jw-blue/80 w-full">
-                <a href="/Explore My Book.pdf" target="_blank" rel="noopener noreferrer">
+                <a href="/Explore My Book.pdf" target="_blank" rel="noopener noreferrer" onClick={trackCTAClick.exploreBook}>
                   Explore My Book
                   <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -42,7 +43,7 @@ export function Hero() {
                 </a>
               </Button>
               <Button variant="outline" size="default" asChild className="border-jw-charcoal text-jw-charcoal hover:bg-jw-charcoal/5 w-full">
-                <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">
+                <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank" onClick={trackCTAClick.workWithMe}>
                   Work With Me
                 </Link>
               </Button>
@@ -67,7 +68,7 @@ export function Hero() {
               
               <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-2 md:pt-4">
                 <Button size="lg" asChild className="bg-jw-blue hover:bg-jw-blue/80">
-                  <a href="/Explore My Book.pdf" target="_blank" rel="noopener noreferrer">
+                  <a href="/Explore My Book.pdf" target="_blank" rel="noopener noreferrer" onClick={trackCTAClick.exploreBook}>
                     Explore My Book
                     <svg className="ml-2 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -75,7 +76,7 @@ export function Hero() {
                   </a>
                 </Button>
                 <Button variant="outline" size="lg" asChild className="border-jw-charcoal text-jw-charcoal hover:bg-jw-charcoal/5">
-                  <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">
+                  <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank" onClick={trackCTAClick.workWithMe}>
                     Work With Me
                   </Link>
                 </Button>

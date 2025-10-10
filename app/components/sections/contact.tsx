@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
+import { trackCTAClick } from "@/lib/analytics";
 
 export function Contact() {
   return (
@@ -44,12 +45,12 @@ export function Contact() {
 
                 <div className="flex flex-col sm:flex-row flex-wrap gap-2">
                   <Button asChild className="bg-jw-burgundy hover:bg-jw-rust w-full sm:w-auto">
-                    <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank">
+                    <Link href="https://calendly.com/joniwoods/virtual-coffee" target="_blank" onClick={trackCTAClick.bookDiscoveryCall}>
                       Book Discovery Call
                     </Link>
                   </Button>
                   <Button variant="outline" asChild className="w-full sm:w-auto">
-                    <Link href="https://books2read.com/u/mq2K7v" target="_blank">
+                    <Link href="https://books2read.com/u/mq2K7v" target="_blank" onClick={trackCTAClick.buyBook}>
                       Get the Book
                     </Link>
                   </Button>

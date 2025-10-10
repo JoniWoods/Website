@@ -96,6 +96,68 @@ export default function RootLayout({
                   window.scrollTo(0, 0);
                 }, 0);
               });
+              
+              // Initialize scroll depth tracking
+              (function() {
+                const scrollDepths = [25, 50, 75, 90, 100];
+                const triggered = {};
+
+                function handleScroll() {
+                  const windowHeight = window.innerHeight;
+                  const documentHeight = document.documentElement.scrollHeight;
+                  const scrollTop = window.scrollY || window.pageYOffset;
+                  const scrollPercent = Math.round(((scrollTop + windowHeight) / documentHeight) * 100);
+
+                  scrollDepths.forEach(function(depth) {
+                    if (scrollPercent >= depth && !triggered[depth]) {
+                      triggered[depth] = true;
+                      if (window.gtag) {
+                        gtag('event', 'scroll', {
+                          event_category: 'engagement',
+                          event_label: 'scroll_depth_' + depth,
+                          value: depth
+                        });
+                      }
+                    }
+                  });
+                }
+
+                let scrollTimeout = null;
+                window.addEventListener('scroll', function() {
+                  if (scrollTimeout) return;
+                  scrollTimeout = setTimeout(function() {
+                    handleScroll();
+                    scrollTimeout = null;
+                  }, 500);
+                });
+              })();
+              
+              // Initialize section visibility tracking
+              window.addEventListener('load', function() {
+                if ('IntersectionObserver' in window) {
+                  const sections = document.querySelectorAll('section[id]');
+                  const observed = {};
+
+                  const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                      const sectionId = entry.target.id;
+                      if (entry.isIntersecting && !observed[sectionId]) {
+                        observed[sectionId] = true;
+                        if (window.gtag) {
+                          gtag('event', 'section_view', {
+                            event_category: 'engagement',
+                            event_label: sectionId
+                          });
+                        }
+                      }
+                    });
+                  }, { threshold: 0.5 });
+
+                  sections.forEach(function(section) {
+                    observer.observe(section);
+                  });
+                }
+              });
             `,
           }}
         />
