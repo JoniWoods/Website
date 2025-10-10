@@ -16,7 +16,7 @@ const nextConfig = {
   },
   // Enable compression for better performance
   compress: true,
-  // Add security and SEO headers
+  // Add security headers
   async headers() {
     return [
       {
@@ -38,32 +38,14 @@ const nextConfig = {
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin',
           },
-          {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
-          },
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, must-revalidate',
-          },
-        ],
-      },
-      {
-        source: '/images/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-      {
-        source: '/_next/static/(.*)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
+           {
+             key: 'Content-Security-Policy',
+             value: "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://joniwoods.com https://www.googletagmanager.com; font-src 'self' data:; connect-src 'self' https://api.web3forms.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self';",
+           },
+           {
+             key: 'Permissions-Policy',
+             value: 'geolocation=(), camera=(), microphone=(), payment=()',
+           },
         ],
       },
     ];

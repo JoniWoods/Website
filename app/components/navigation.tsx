@@ -19,11 +19,11 @@ export function Navigation() {
   }, []);
 
   const navItems = [
-    { label: "Book", href: "#book" },
     { label: "About", href: "#about" },
     { label: "Services", href: "#services" },
+    { label: "Book", href: "#book" },
     { label: "Testimonials", href: "#testimonials" },
-    { label: "Resources", href: "#transform" },
+    { label: "Resources", href: "#resources" },
     { label: "Contact", href: "#contact" },
   ];
 

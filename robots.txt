@@ -3,15 +3,15 @@ Allow: /
 
 # Sitemaps
 Sitemap: https://joniwoods.com/sitemap.xml
-Sitemap: https://joniwoods.com/image-sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
 
 # Block sensitive paths (if any)
 Disallow: /api/
+Disallow: /_next/static/
+Disallow: /404.html
 
-# Allow important resources
+# Allow important pages
 Allow: /images/
 Allow: /fonts/
-Allow: /_next/static/

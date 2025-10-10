@@ -3,7 +3,6 @@ const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 const { generateSitemap } = require('./generate-sitemap');
-const { generateImageSitemap } = require('./generate-image-sitemap');
 
 const distDir = process.env.NEXT_DIST_DIR || '.next';
 const standalonePath = path.join(distDir, 'standalone', 'app');
@@ -11,19 +10,12 @@ const standalonePath = path.join(distDir, 'standalone', 'app');
 // Create standalone directory
 fs.mkdirSync(standalonePath, { recursive: true });
 
-// Generate sitemaps
+// Generate sitemap
 try {
   generateSitemap();
   console.log('✓ Sitemap generated');
 } catch (error) {
   console.warn('⚠️  Failed to generate sitemap:', error.message);
-}
-
-try {
-  generateImageSitemap();
-  console.log('✓ Image sitemap generated');
-} catch (error) {
-  console.warn('⚠️  Failed to generate image sitemap:', error.message);
 }
 
 // Copy all build artifacts
@@ -51,4 +43,11 @@ try {
   console.log('✓ Build artifacts copied to standalone directory');
 } catch (error) {
   console.error('Error copying build artifacts:', error.message);
+}
+
+// Inject Google Analytics gtag.js into index.html after export
+try {
+  require('./inject-gtag');
+} catch (e) {
+  console.error('Failed to inject Google Analytics:', e);
 }
