@@ -14,13 +14,15 @@ export function Hero() {
         <div className="w-full">
           <Image
             src="/images/Joni_Woods_Author_Portrait_Optimized.jpg"
-            alt="Joni Woods, certified life coach and author of 'Burned, Blocked, and Better Than Ever,' smiling warmly in professional portrait"
+            alt="Joni Woods, certified life coach and author"
             width={600}
             height={800}
-            className="w-full h-auto"
+            className="hero-image"
             priority={true}
+            quality={75}
             sizes="(max-width: 768px) 100vw, 50vw"
-            quality={85}
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkbHB0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
           />
         </div>
         
@@ -88,13 +90,15 @@ export function Hero() {
             <div className="relative w-full">
               <Image
                 src="/images/Joni_Woods_Author_Portrait_Optimized.jpg"
-                alt="Joni Woods, certified life coach and author of 'Burned, Blocked, and Better Than Ever,' smiling warmly in professional portrait"
+                alt="Joni Woods, certified life coach and author"
                 width={800}
                 height={1000}
-                className="w-full h-auto"
+                className="hero-image"
                 priority={true}
+                quality={75}
                 sizes="(max-width: 768px) 100vw, 50vw"
-                quality={85}
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkbHB0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
               />
             </div>
           </div>

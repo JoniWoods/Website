@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
+import { trackCTAClick, trackFileDownload } from "@/lib/analytics";
 
 // TikTok icon component since it's not in lucide-react
 function TikTokIcon({ className }: { className?: string }) {
@@ -59,12 +60,12 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="#transformation-form" 
+                <a
                   className="text-white/80 hover:text-white transition-colors"
+                  href="mailto:joniwoods@gmail.com?subject=Sign%20Me%20Up%20for%20the%20Newsletter&amp;body=Hi%20Joni%2C%0A%0AWould%20you%20please%20add%20me%20to%20your%20email%20list%20for%20the%20newsletter%3F%0A%0AThanks%21"
                 >
-                  Newsletter
-                </Link>
+                  Get the Newsletter
+                </a>
               </li>
             </ul>
           </div>
@@ -88,6 +89,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white/80 hover:text-white transition-colors"
+                  onClick={() => trackFileDownload('Joni_Woods_Free_Business_Resources.pdf', '/Joni_Woods_Free_Business_Resources.pdf')}
                 >
                   Free Resources
                 </a>

@@ -1,7 +1,85 @@
 2:I[9107,[],"ClientPageRoot"]
-3:I[17,["457","static/chunks/457-ccbe26bfeef443d2.js","931","static/chunks/app/page-1c995148d7493529.js"],"default",1]
-4:I[4707,[],""]
-5:I[6423,[],""]
-0:["XTecC9sWhzObd3gcPhWkD",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",{"children":["__PAGE__",{},[["$L1",["$","$L2",null,{"props":{"params":{},"searchParams":{}},"Component":"$3"}],null],null],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/755d0dcc6c03375b.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"scroll-smooth","children":[["$","head",null,{"children":["$","style",null,{"children":"\n            /* Ensure all sections with non-white backgrounds are full width */\n            section {\n              width: 100%;\n              margin-left: auto;\n              margin-right: auto;\n            }\n            section:not([style*='background-color: #ffffff']) {\n              width: 100%;\n            }\n          "}]}],["$","body",null,{"className":"__className_f367f3","children":[["$","$L4",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":"404"}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],"notFoundStyles":[]}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              // Disable browser scroll restoration\n              if ('scrollRestoration' in history) {\n                history.scrollRestoration = 'manual';\n              }\n              \n              // Force scroll to top immediately\n              window.scrollTo(0, 0);\n              \n              // Ensure scroll to top after page fully loads\n              window.addEventListener('load', function() {\n                setTimeout(function() {\n                  window.scrollTo(0, 0);\n                }, 0);\n              });\n            "}}]]}]]}]],null],null],["$L6",null]]]]
-6:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Joni Woods - Burned, Blocked, and Better Than Ever"}],["$","meta","3",{"name":"description","content":"A raw, faith-rooted memoir of divorce, self-discovery, and the healing that begins when you stop pretending you're fine."}],["$","meta","4",{"name":"author","content":"Joni Woods"}],["$","meta","5",{"name":"keywords","content":"Joni Woods, healing, divorce recovery, self-discovery, relationship coach, emotional intelligence"}],["$","meta","6",{"property":"og:title","content":"Joni Woods - Burned, Blocked, and Better Than Ever"}],["$","meta","7",{"property":"og:description","content":"Transform your pain into power. Break generational patterns. Create the future you deserve."}],["$","meta","8",{"property":"og:url","content":"https://joniwoods.com"}],["$","meta","9",{"property":"og:site_name","content":"Joni Woods"}],["$","meta","10",{"property":"og:locale","content":"en_US"}],["$","meta","11",{"property":"og:image","content":"https://joniwoods.com/images/JoniWoods_logo.png"}],["$","meta","12",{"property":"og:image:width","content":"1200"}],["$","meta","13",{"property":"og:image:height","content":"630"}],["$","meta","14",{"property":"og:type","content":"website"}],["$","meta","15",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","16",{"name":"twitter:title","content":"Joni Woods - Burned, Blocked, and Better Than Ever"}],["$","meta","17",{"name":"twitter:description","content":"Transform your pain into power. Break generational patterns. Create the future you deserve."}],["$","meta","18",{"name":"twitter:image","content":"https://joniwoods.com/images/JoniWoods_logo.png"}],["$","meta","19",{"name":"next-size-adjust"}]]
+3:I[8976,["726","static/chunks/726-2e1311c48f6a9440.js","85","static/chunks/85-1c9cb0ebb10052eb.js","931","static/chunks/app/page-c33e475ad9c9419c.js"],"default",1]
+5:I[4707,[],""]
+6:I[6423,[],""]
+7:I[5447,["726","static/chunks/726-2e1311c48f6a9440.js","160","static/chunks/app/not-found-028fa761f4fa6b11.js"],"default"]
+4:T771,{"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://joniwoods.com/#person","name":"Joni Woods","url":"https://joniwoods.com","image":"https://joniwoods.com/images/Joni_Woods_Author_Portrait_Optimized.jpg","description":"Certified life coach, culture strategist, speaker, and author helping people transform through self-awareness, healing, and real human connection.","jobTitle":"Life Coach & Author","worksFor":{"@type":"Organization","name":"Journey Life Coaching"},"sameAs":["https://www.facebook.com/joni.woods.9","https://www.instagram.com/joniwoods","https://www.tiktok.com/@joniwoods730","https://www.youtube.com/channel/UCQ2d3jM3TYtMq0v-LF0bOMw","http://journeylifecoaching.life"]},{"@type":"Book","@id":"https://joniwoods.com/#book","name":"Burned, Blocked, and Better Than Ever","author":{"@id":"https://joniwoods.com/#person"},"description":"A raw, faith-rooted memoir of divorce, self-discovery, and the healing that begins when you stop pretending you're fine.","image":"https://joniwoods.com/images/Woods_FrontCover_3D.png","genre":"Self-Help, Memoir","url":"https://books2read.com/u/bw5ZDa"},{"@type":"WebSite","@id":"https://joniwoods.com/#website","url":"https://joniwoods.com","name":"Joni Woods - Life Coach & Author","description":"Transform your pain into power. Break generational patterns. Create the future you deserve.","publisher":{"@id":"https://joniwoods.com/#person"},"potentialAction":{"@type":"SearchAction","target":"https://joniwoods.com/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"Organization","@id":"https://joniwoods.com/#organization","name":"Journey Life Coaching","url":"http://journeylifecoaching.life","founder":{"@id":"https://joniwoods.com/#person"},"description":"Professional life coaching services specializing in emotional intelligence, relationship healing, and personal transformation."}]}8:Tc38,
+              // Disable browser scroll restoration
+              if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'manual';
+              }
+              
+              // Force scroll to top immediately
+              window.scrollTo(0, 0);
+              
+              // Ensure scroll to top after page fully loads
+              window.addEventListener('load', function() {
+                setTimeout(function() {
+                  window.scrollTo(0, 0);
+                }, 0);
+              });
+              
+              // Initialize scroll depth tracking
+              (function() {
+                const scrollDepths = [25, 50, 75, 90, 100];
+                const triggered = {};
+
+                function handleScroll() {
+                  const windowHeight = window.innerHeight;
+                  const documentHeight = document.documentElement.scrollHeight;
+                  const scrollTop = window.scrollY || window.pageYOffset;
+                  const scrollPercent = Math.round(((scrollTop + windowHeight) / documentHeight) * 100);
+
+                  scrollDepths.forEach(function(depth) {
+                    if (scrollPercent >= depth && !triggered[depth]) {
+                      triggered[depth] = true;
+                      if (window.gtag) {
+                        gtag('event', 'scroll', {
+                          event_category: 'engagement',
+                          event_label: 'scroll_depth_' + depth,
+                          value: depth
+                        });
+                      }
+                    }
+                  });
+                }
+
+                let scrollTimeout = null;
+                window.addEventListener('scroll', function() {
+                  if (scrollTimeout) return;
+                  scrollTimeout = setTimeout(function() {
+                    handleScroll();
+                    scrollTimeout = null;
+                  }, 500);
+                });
+              })();
+              
+              // Initialize section visibility tracking
+              window.addEventListener('load', function() {
+                if ('IntersectionObserver' in window) {
+                  const sections = document.querySelectorAll('section[id]');
+                  const observed = {};
+
+                  const observer = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                      const sectionId = entry.target.id;
+                      if (entry.isIntersecting && !observed[sectionId]) {
+                        observed[sectionId] = true;
+                        if (window.gtag) {
+                          gtag('event', 'section_view', {
+                            event_category: 'engagement',
+                            event_label: sectionId
+                          });
+                        }
+                      }
+                    });
+                  }, { threshold: 0.5 });
+
+                  sections.forEach(function(section) {
+                    observer.observe(section);
+                  });
+                }
+              });
+            0:["r0ZC0_9rCFc-JGazv6d09",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",{"children":["__PAGE__",{},[["$L1",["$","$L2",null,{"props":{"params":{},"searchParams":{}},"Component":"$3"}],null],null],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/a9ce907b4af86832.css","precedence":"next","crossOrigin":"$undefined"}]],["$","html",null,{"lang":"en","className":"scroll-smooth","children":[["$","head",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"\n            .hero-image{width:100%;height:auto;max-width:600px}\n            .gradient-text{background:linear-gradient(45deg,#722f37,#b91c1c);background-clip:text;-webkit-background-clip:text;color:transparent}\n            .bg-jw-burgundy{background-color:#722f37}\n            .text-jw-charcoal{color:#2d3748}\n            .font-heading{font-family:Georgia,'Times New Roman',serif}\n            body{font-family:Inter,sans-serif;line-height:1.6}\n            .container{max-width:1200px;margin:0 auto;padding:0 1rem}\n          "}}],["$","link",null,{"rel":"preconnect","href":"https://www.googletagmanager.com"}],["$","link",null,{"rel":"preconnect","href":"https://www.google-analytics.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://calendly.com"}],["$","link",null,{"rel":"dns-prefetch","href":"https://books2read.com"}],["$","link",null,{"rel":"preload","as":"image","href":"/images/Joni_Woods_Author_Portrait_Optimized.jpg"}],["$","link",null,{"rel":"preload","href":"/fonts/MyriadPro-Semibold.otf","as":"font","type":"font/otf","crossOrigin":""}],["$","script",null,{"async":true,"src":"https://www.googletagmanager.com/gtag/js?id=G-15GL881LLP"}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"\n              window.dataLayer = window.dataLayer || [];\n              function gtag(){dataLayer.push(arguments);}\n              gtag('js', new Date());\n              gtag('config', 'G-15GL881LLP');\n            "}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$4"}}],["$","style",null,{"children":"\n            /* Ensure all sections with non-white backgrounds are full width */\n            section {\n              width: 100%;\n              margin-left: auto;\n              margin-right: auto;\n            }\n            section:not([style*='background-color: #ffffff']) {\n              width: 100%;\n            }\n          "}]]}],["$","body",null,{"className":"__className_f367f3","children":[["$","$L5",null,{"parallelRouterKey":"children","segmentPath":["children"],"error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":["$","$L7",null,{}],"notFoundStyles":[]}],["$","script",null,{"dangerouslySetInnerHTML":{"__html":"$8"}}]]}]]}]],null],null],["$L9",null]]]]
+9:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Joni Woods - Burned, Blocked, and Better Than Ever"}],["$","meta","3",{"name":"description","content":"A raw, faith-rooted memoir of divorce, self-discovery, and the healing that begins when you stop pretending you're fine."}],["$","meta","4",{"name":"author","content":"Joni Woods"}],["$","meta","5",{"name":"keywords","content":"Joni Woods, healing, divorce recovery, self-discovery, relationship coach, emotional intelligence, life coach, author, transformation, self-awareness"}],["$","meta","6",{"name":"robots","content":"index, follow"}],["$","link","7",{"rel":"canonical","href":"https://joniwoods.com"}],["$","meta","8",{"property":"og:title","content":"Joni Woods - Burned, Blocked, and Better Than Ever"}],["$","meta","9",{"property":"og:description","content":"Transform your pain into power. Break generational patterns. Create the future you deserve."}],["$","meta","10",{"property":"og:url","content":"https://joniwoods.com"}],["$","meta","11",{"property":"og:site_name","content":"Joni Woods"}],["$","meta","12",{"property":"og:locale","content":"en_US"}],["$","meta","13",{"property":"og:image","content":"https://joniwoods.com/images/JoniWoods_logo.png"}],["$","meta","14",{"property":"og:image:width","content":"1200"}],["$","meta","15",{"property":"og:image:height","content":"630"}],["$","meta","16",{"property":"og:image:alt","content":"Joni Woods - Life Coach and Author"}],["$","meta","17",{"property":"og:type","content":"website"}],["$","meta","18",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","19",{"name":"twitter:creator","content":"@joniwoods730"}],["$","meta","20",{"name":"twitter:title","content":"Joni Woods - Burned, Blocked, and Better Than Ever"}],["$","meta","21",{"name":"twitter:description","content":"Transform your pain into power. Break generational patterns. Create the future you deserve."}],["$","meta","22",{"name":"twitter:image","content":"https://joniwoods.com/images/JoniWoods_logo.png"}],["$","meta","23",{"name":"next-size-adjust"}]]
 1:null

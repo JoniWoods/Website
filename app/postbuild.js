@@ -6,6 +6,8 @@ const { generateSitemap } = require('./generate-sitemap');
 
 const distDir = process.env.NEXT_DIST_DIR || '.next';
 const standalonePath = path.join(distDir, 'standalone', 'app');
+const outDir = path.join(__dirname, 'out');
+const repoRoot = path.resolve(__dirname, '..');
 
 // Create standalone directory
 fs.mkdirSync(standalonePath, { recursive: true });
@@ -50,4 +52,51 @@ try {
   require('./inject-gtag');
 } catch (e) {
   console.error('Failed to inject Google Analytics:', e);
+}
+
+// Copy static export (out) to repository root so production files are up to date
+try {
+  if (fs.existsSync(outDir)) {
+    // Ensure _next at root matches the latest build
+    const rootNext = path.join(repoRoot, '_next');
+    if (fs.existsSync(rootNext)) {
+      try {
+        fs.rmSync(rootNext, { recursive: true, force: true });
+      } catch (e) {
+        // If removal fails, fallback to copying over
+      }
+    }
+
+    // Copy _next directory
+    if (fs.existsSync(path.join(outDir, '_next'))) {
+      execSync(`cp -R "${path.join(outDir, '_next')}" "${repoRoot}/_next"`);
+    }
+
+    // Copy top-level exported files (html, xml, txt, pdf)
+    // Use Node APIs to avoid shell glob + whitespace path issues
+    const exts = new Set(['.html', '.xml', '.txt', '.pdf']);
+    try {
+      const entries = fs.readdirSync(outDir, { withFileTypes: true });
+      entries
+        .filter((ent) => ent.isFile() && exts.has(path.extname(ent.name)))
+        .forEach((ent) => {
+          const src = path.join(outDir, ent.name);
+          const dest = path.join(repoRoot, ent.name);
+          try {
+            fs.copyFileSync(src, dest);
+            // console.log(`Copied ${ent.name} -> ${dest}`);
+          } catch (copyErr) {
+            console.warn(`⚠️  Failed to copy ${ent.name}:`, copyErr.message);
+          }
+        });
+    } catch (dirErr) {
+      console.warn('⚠️  Could not read static export directory:', dirErr.message);
+    }
+
+    console.log('✓ Static export copied to repository root');
+  } else {
+    console.warn('⚠️  Static export directory not found:', outDir);
+  }
+} catch (error) {
+  console.error('Error copying static export to root:', error.message);
 }

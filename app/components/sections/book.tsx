@@ -15,12 +15,12 @@ export function Book() {
             <div className="relative w-full max-w-sm aspect-[3/4] mb-6">
               <Image
                 src="/images/Woods_FrontCover_3D.png"
-                alt="Burned, Blocked, and Better Than Ever book cover by Joni Woods featuring inspiring design for healing and transformation"
+                alt="Book cover - Burned, Blocked, and Better Than Ever"
                 fill
                 className="object-contain"
-                loading="lazy"
-                quality={85}
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                loading="eager"
+                quality={75}
+                sizes="(max-width: 640px) 300px, (max-width: 1024px) 400px, 300px"
               />
             </div>
             <div className="text-3xl font-semibold text-muted-foreground text-center">

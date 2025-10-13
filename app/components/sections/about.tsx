@@ -18,6 +18,7 @@ export function About() {
         <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
           Certified life coach and culture strategist with over 15 years helping individuals, couples, and organizations strengthen communication and lead with emotional intelligence.
         </p>
+        {/* Newsletter button removed as requested */}
       </div>
       
       <div className="mx-auto space-y-6 sm:space-y-8 md:space-y-10 lg:space-y-12 md:max-w-[64rem] lg:max-w-[80rem] px-4 sm:px-6 md:px-8">
@@ -56,17 +57,6 @@ export function About() {
                   serving with the Women's Exchange of Washtenaw, United Way, and 
                   Washtenaw Business Association.
                 </p>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-2 pt-4">
-                <Button 
-                  className="bg-jw-blue text-white border-2 border-jw-blue hover:bg-jw-blue/60 hover:text-white w-full sm:w-auto" 
-                  asChild
-                >
-                  <Link href="mailto:joniwoods@gmail.com?subject=Sign%20Me%20Up%20for%20the%20Newsletter&body=Hi%20Joni%2C%0A%0AWould%20you%20please%20add%20me%20to%20your%20email%20list%20for%20the%20newsletter%3F%0A%0AThanks%21" onClick={trackCTAClick.getNewsletter}>
-                    Get the Newsletter
-                  </Link>
-                </Button>
               </div>
             </div>
           </div>

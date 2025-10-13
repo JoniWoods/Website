@@ -115,11 +115,12 @@ export function Blog() {
               YouTube
             </Link>
           </Button>
-          <Button asChild className="bg-jw-rust text-white hover:bg-jw-rust/80 w-full sm:w-auto">
-            <Link href="https://journeylifecoaching.life/newsletter/" target="_blank" onClick={trackCTAClick.getNewsletter}>
-              Get the Newsletter
-            </Link>
-          </Button>
+          <a
+            className="text-white/80 hover:text-white transition-colors w-full sm:w-auto text-center"
+            href="mailto:joniwoods@gmail.com?subject=Sign%20Me%20Up%20for%20the%20Newsletter&amp;body=Hi%20Joni%2C%0A%0AWould%20you%20please%20add%20me%20to%20your%20email%20list%20for%20the%20newsletter%3F%0A%0AThanks%21"
+          >
+            Get the Newsletter
+          </a>
         </div>
       </div>
     </section>
