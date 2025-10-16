@@ -100,6 +100,7 @@ export function Footer() {
             <div className="flex space-x-4">
               <Link 
                 href="https://www.instagram.com/authorjoniwoods/" 
+                aria-label="Follow Joni Woods on Instagram"
                 target="_blank"
                 className="text-white/80 hover:text-white transition-colors"
               >
