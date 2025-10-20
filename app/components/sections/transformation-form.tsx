@@ -218,7 +218,7 @@ Joni`;
                     onValueChange={(value) => updateFormData({ supportType: value })}
                     disabled={loading}
                     required
-                    ria-label="What type of support interests you most?"
+                    aria-label="What type of support interests you most?"
                   >
                     <SelectTrigger>
                       <SelectValue placeholder="Please select a support type" />
