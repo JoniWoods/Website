@@ -100,7 +100,7 @@ export function Footer() {
             <div className="flex space-x-4">
               <Link 
                 href="https://www.instagram.com/authorjoniwoods/" 
-                aria-label="Follow Joni Woods on Instagram"
+                aria-label="Follow Joni Woods on instagram"
                 target="_blank"
                 className="text-white/80 hover:text-white transition-colors"
               >
@@ -108,6 +108,7 @@ export function Footer() {
               </Link>
               <Link 
                 href="https://www.tiktok.com/@joniwoods730" 
+                aria-label="Follow Joni Woods on tiktok"
                 target="_blank"
                 className="text-white/80 hover:text-white transition-colors"
               >
@@ -116,6 +117,7 @@ export function Footer() {
               {/* LinkedIn link temporarily removed due to access restrictions */}
               <Link 
                 href="https://www.facebook.com/joni.woods.9" 
+                aria-label="Follow Joni Woods on facebook"
                 target="_blank"
                 className="text-white/80 hover:text-white transition-colors"
               >
@@ -123,6 +125,7 @@ export function Footer() {
               </Link>
               <Link 
                 href="https://www.youtube.com/channel/UCQ2d3jM3TYtMq0v-LF0bOMw" 
+                aria-label="Follow Joni Woods on youtube"
                 target="_blank"
                 className="text-white/80 hover:text-white transition-colors"
               >
