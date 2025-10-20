@@ -212,7 +212,7 @@ Joni`;
                 </div>
                 
                 <div className="space-y-2">
-                  <Label htmlFor="support">What type of support interests you most? *</Label>
+                  <Label htmlFor="support" id="support-label">What type of support interests you most? *</Label>
                   <Select 
                     value={formData.supportType} 
                     onValueChange={(value) => updateFormData({ supportType: value })}
@@ -220,7 +220,7 @@ Joni`;
                     required
                     aria-label="What type of support interests you most?"
                   >
-                    <SelectTrigger>
+                    <SelectTrigger id="support" aria-labelledby="support-label">
                       <SelectValue placeholder="Please select a support type" />
                     </SelectTrigger>
                     <SelectContent>
