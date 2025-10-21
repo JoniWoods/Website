@@ -87,13 +87,13 @@ export function Hero() {
             </div>
 
             {/* Right Column - Desktop Hero Image */}
-            <div className="relative w-full">
+            <div className="relative w-full max-w-[600px]">
               <Image
                 src="/images/Joni_Woods_Author_Portrait_Optimized.jpg"
                 alt="Joni Woods, certified life coach and author"
                 width={800}
-                height={1000}
-                className="hero-image"
+                height={534}
+                className="hero-image w-full h-auto object-cover"
                 priority={true}
                 quality={75}
                 sizes="(max-width: 768px) 100vw, 50vw"
