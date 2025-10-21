@@ -16,8 +16,8 @@ export function Hero() {
             src="/images/Joni_Woods_Author_Portrait_Optimized.jpg"
             alt="Joni Woods, certified life coach and author"
             width={600}
-            height={800}
-            className="hero-image"
+            height={534}
+            className="hero-image w-full h-auto object-cover"
             priority={true}
             quality={75}
             sizes="(max-width: 768px) 100vw, 50vw"
