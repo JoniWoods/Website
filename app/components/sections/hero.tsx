@@ -13,7 +13,7 @@ export function Hero() {
         {/* Mobile Hero Image - Full Width */}
         <div className="w-full">
           <Image
-            src="/images/Joni_Woods_Author_Portrait_Optimized.jpg"
+            src="/images/Joni_Woods_Author_Portrait_Optimized.webp"
             alt="Joni Woods, certified life coach and author"
             width={600}
             height={534}
@@ -89,7 +89,7 @@ export function Hero() {
             {/* Right Column - Desktop Hero Image */}
             <div className="relative w-full max-w-[600px]">
               <Image
-                src="/images/Joni_Woods_Author_Portrait_Optimized.jpg"
+                src="/images/Joni_Woods_Author_Portrait_Optimized.webp"
                 alt="Joni Woods, certified life coach and author"
                 width={800}
                 height={534}
