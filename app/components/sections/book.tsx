@@ -14,7 +14,7 @@ export function Book() {
           <div className="flex flex-col items-center justify-center h-full">
             <div className="relative w-full max-w-sm aspect-[3/4] mb-6">
               <Image
-                src="/images/Woods_FrontCover_3D.png"
+                src="/images/Woods_FrontCover_3D.webp"
                 alt="Book cover - Burned, Blocked, and Better Than Ever"
                 fill
                 className="object-contain"
