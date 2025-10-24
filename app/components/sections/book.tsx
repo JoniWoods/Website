@@ -18,7 +18,8 @@ export function Book() {
                 alt="Book cover - Burned, Blocked, and Better Than Ever"
                 fill
                 className="object-contain"
-                loading="eager"
+                loading="lazy"
+                decoding="async"
                 quality={75}
                 sizes="(max-width: 640px) 300px, (max-width: 1024px) 400px, 300px"
               />
