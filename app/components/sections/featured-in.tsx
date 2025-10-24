@@ -7,21 +7,21 @@ import Link from "next/link";
 const features = [
   {
     name: "DisruptHR",
-    logo: "/images/featured-in/disrupthr.jpg",
+    logo: "/images/featured-in/disrupthr.webp",
     url: "https://www.linkedin.com/company/disrupthr-llc/",
     width: 130,
     height: 50
   },
   {
     name: "Love Means Business",
-    logo: "/images/featured-in/love-means-business.jpg",
+    logo: "/images/featured-in/love-means-business.webp",
     url: "https://www.linkedin.com/company/love-means-business/",
     width: 130,
     height: 50
   },
   {
     name: "Walsh College",
-    logo: "/images/featured-in/walsh-college.png",
+    logo: "/images/featured-in/walsh-college.webp",
     url: "https://walshcollege.edu",
     width: 130,
     height: 50
@@ -42,7 +42,7 @@ const features = [
   },
   {
     name: "The Sun Times News",
-    logo: "/images/featured-in/sun-times-news.png",
+    logo: "/images/featured-in/sun-times-news.webp",
     url: "https://thesuntimesnews.com",
     width: 130,
     height: 50
