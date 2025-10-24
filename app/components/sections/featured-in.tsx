@@ -28,7 +28,7 @@ const features = [
   },
   {
     name: "Washtenaw Business Association",
-    logo: "/images/featured-in/wba.png",
+    logo: "/images/featured-in/wba.webp",
     url: "https://www.washtenawbusinessassociation.com",
     width: 130,
     height: 50

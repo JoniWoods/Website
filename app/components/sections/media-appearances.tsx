@@ -9,14 +9,14 @@ const appearances = [
   {
     title: "Newest with Jason Tracey",
     description: "Burned, Blocked, & Better Than Ever w/ Joni Woods",
-    image: "/images/media-appearances/podcast1.jpeg",
+    image: "/images/media-appearances/podcast1.webp",
     category: "Podcast",
     url: "https://youtu.be/B8vZcNDvv48"
   },
   {
     title: "Special Guest Interview",
     description: "Broken to Better than Ever with Special Guest Joni Woods",
-    image: "/images/media-appearances/podcast2.jpeg",
+    image: "/images/media-appearances/podcast2.webp",
     category: "Podcast",
     url: "https://youtu.be/bi12wJllQoE"
   },
