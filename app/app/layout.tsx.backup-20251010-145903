@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Joni Woods",
     images: [
       {
-        url: "/images/JoniWoods_logo.png",
+        url: "/images/JoniWoods_logo.webp",
         width: 1200,
         height: 630,
         alt: "Joni Woods - Life Coach and Author",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Joni Woods - Burned, Blocked, and Better Than Ever",
     description: "Transform your pain into power. Break generational patterns. Create the future you deserve.",
-    images: ["/images/JoniWoods_logo.png"],
+    images: ["/images/JoniWoods_logo.webp"],
     creator: "@joniwoods730",
   },
   alternates: {

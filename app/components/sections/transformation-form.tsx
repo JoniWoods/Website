@@ -262,7 +262,7 @@ Joni`;
             <CardHeader className="text-center pt-8 pb-6">
               <div className="flex justify-center mb-6">
                 <Image 
-                  src="/images/JoniWoods_logo.png" 
+                  src="/images/JoniWoods_logo.webp" 
                   alt="Joni Woods logo - certified life coach, author and transformation expert"
                   width={60}
                   height={60}

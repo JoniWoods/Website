@@ -35,7 +35,7 @@ export function Navigation() {
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Image 
-            src="/images/JoniWoods_logo.png" 
+            src="/images/JoniWoods_logo.webp" 
             alt="Joni Woods logo - certified life coach, author and transformation expert" 
             width={40} 
             height={40}

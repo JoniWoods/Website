@@ -6,7 +6,7 @@ const path = require('path');
 // Images to optimize with priority (above fold)
 const priorityImages = [
   '/images/Joni_Woods_Author_Portrait_Optimized.jpg',
-  '/images/JoniWoods_logo.png'
+  '/images/JoniWoods_logo.webp'
 ];
 
 // Large images that need lazy loading

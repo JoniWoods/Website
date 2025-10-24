@@ -23,7 +23,7 @@ const appearances = [
   {
     title: "Destination Ann Arbor",
     description: "Workshop",
-    image: "/images/media-appearances/podcast3.jpeg",
+    image: "/images/media-appearances/podcast3.webp",
     category: "Workshop",
     url: "https://youtu.be/sPUDaTnnAz0"
   }

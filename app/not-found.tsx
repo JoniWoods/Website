@@ -12,7 +12,7 @@ export default function NotFound() {
           {/* Left side - Image */}
           <div className="order-2 md:order-1">
             <Image
-              src="/images/JoniWoods_logo.png"
+              src="/images/JoniWoods_logo.webp"
               alt="Joni Woods logo - certified life coach, author and transformation expert"
               width={300}
               height={200}

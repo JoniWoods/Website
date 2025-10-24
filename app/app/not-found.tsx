@@ -23,7 +23,7 @@ export default function NotFound() {
           {/* Logo */}
           <div style={{ order: 2 }}>
             <Image
-              src="/images/JoniWoods_logo.png"
+              src="/images/JoniWoods_logo.webp"
               alt="Joni Woods logo - certified life coach, author and transformation expert"
               width={300}
               height={200}
