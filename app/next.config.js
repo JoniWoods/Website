@@ -38,14 +38,24 @@ const nextConfig = {
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin',
           },
-           {
-             key: 'Content-Security-Policy',
-             value: "default-src 'self'; script-src 'self' https://www.googletagmanager.com 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://joniwoods.com https://www.googletagmanager.com; font-src 'self' data:; connect-src 'self' https://api.web3forms.com https://www.googletagmanager.com; frame-ancestors 'none'; object-src 'none'; base-uri 'self';",
-           },
-           {
-             key: 'Permissions-Policy',
-             value: 'geolocation=(), camera=(), microphone=(), payment=()',
-           },
+          {
+            key: 'Content-Security-Policy',
+            value: `
+              default-src 'self';
+              script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com;
+              style-src 'self' 'unsafe-inline';
+              img-src 'self' data: blob: https://joniwoods.com https://www.googletagmanager.com https://journeylifecoachinglife.wordpress.com;
+              font-src 'self' data:;
+              connect-src 'self' https://api.web3forms.com https://www.googletagmanager.com https://public-api.wordpress.com/rest/v1.1/sites/journeylifecoaching.life/posts;
+              frame-ancestors 'none';
+              object-src 'none';
+              base-uri 'self';
+            `.replace(/\s{2,}/g, ' ').trim(),
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'geolocation=(), camera=(), microphone=(), payment=()',
+          },
         ],
       },
     ];

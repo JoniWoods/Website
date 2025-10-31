@@ -51,17 +51,19 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <head>
         {/* Critical CSS - Inline for immediate rendering */}
-        <style dangerouslySetInnerHTML={{
-          __html: `
-            .hero-image{width:100%;height:auto;max-width:600px}
-            .gradient-text{background:linear-gradient(45deg,#722f37,#b91c1c);background-clip:text;-webkit-background-clip:text;color:transparent}
-            .bg-jw-burgundy{background-color:#722f37}
-            .text-jw-charcoal{color:#2d3748}
-            .font-heading{font-family:Georgia,'Times New Roman',serif}
-            body{font-family:Inter,sans-serif;line-height:1.6}
-            .container{max-width:1200px;margin:0 auto;padding:0 1rem}
-          `
-        }} />
+        <style 
+          dangerouslySetInnerHTML={{
+            __html: `
+              .hero-image{width:100%;height:auto;max-width:600px}
+              .gradient-text{background:linear-gradient(45deg,#722f37,#b91c1c);background-clip:text;-webkit-background-clip:text;color:transparent}
+              .bg-jw-burgundy{background-color:#722f37}
+              .text-jw-charcoal{color:#2d3748}
+              .font-heading{font-family:Georgia,'Times New Roman',serif}
+              body{font-family:Inter,sans-serif;line-height:1.6}
+              .container{max-width:1200px;margin:0 auto;padding:0 1rem}
+            `
+          }} 
+        />
         
         {/* Preconnect to external domains for faster loading */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
@@ -88,19 +90,21 @@ export default function RootLayout({
           }}
         />
         <StructuredData />
-        <style>
-          {`
-            /* Ensure all sections with non-white backgrounds are full width */
-            section {
-              width: 100%;
-              margin-left: auto;
-              margin-right: auto;
-            }
-            section:not([style*='background-color: #ffffff']) {
-              width: 100%;
-            }
-          `}
-        </style>
+        <style
+          dangerouslySetInnerHTML={{ 
+            __html: `
+              /* Ensure all sections with non-white backgrounds are full width */
+              section {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+              }
+              section:not([style*='background-color: #ffffff']) {
+                width: 100%;
+              }
+            `
+          }}
+        />
       </head>
       <body className={inter.className}>
         {children}
